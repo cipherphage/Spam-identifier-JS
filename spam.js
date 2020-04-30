@@ -1,5 +1,6 @@
-var spamCollection = [
-    `<body><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"widt=
+var spamCollection = {
+    "a": {
+      "body": `<body><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"widt=
     h:600px; max-width:600px;margin:0 auto;text-align: center;font-family: Aria=
     l, Helvetica, sans-serif;padding-top:10px;"><tbody><tr><td><a href=3D"http:=
     //twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/go" style=
@@ -122,9 +123,16 @@ var spamCollection = [
     zcBAA3BAACWu9wUzzgXViw/rmvaddr.gif" width=3D"314" height=3D"26" /></a></p><=
     /td></tr></tbody></table></body>
     </html>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
   
   
-    `<table class=3D"body" data-made-with-foundation=3D"" style=3D"margin:0 auto=
+    "b": {
+      "body": `<table class=3D"body" data-made-with-foundation=3D"" style=3D"margin:0 auto=
     ;">
       <tbody>
         <tr>
@@ -457,9 +465,16 @@ var spamCollection = [
         </tr>
       </tbody>
     </table>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
   
-  
-    `<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #e6e6e6; margin: 0px; padding: 0px;" bgcolor="#e6e6e6">
+
+    "c": {
+      "body": `<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #e6e6e6; margin: 0px; padding: 0px;" bgcolor="#e6e6e6">
     <table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
     <tr>
     <td class="preheader-container">
@@ -581,7 +596,7 @@ var spamCollection = [
                         <table cellpadding="0" cellspacing="0" border="0">
                           <tr>
                             <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
-                              <a href="https://visitor.constantcontact.com/do?p=un&m=001fw7lzBT8cETZof_RDkY7mw%3D&ch=e8010840-7e90-11ea-acf4-d4ae529a7b12&ca=e11867a7-d734-4547-9873-e68b35ecbf96" style="color: #5d5d5d">Unsubscribe j3pydev@gmail.com</a>
+                              <a href="https://visitor.constantcontact.com/do?p=un&m=001fw7lzBT8cETZof_RDkY7mw%3D&ch=e8010840-7e90-11ea-acf4-d4ae529a7b12&ca=e11867a7-d734-4547-9873-e68b35ecbf96" style="color: #5d5d5d">Unsubscribe example@example.com</a>
                             </td>
                           </tr>
                           <tr>
@@ -637,9 +652,16 @@ var spamCollection = [
         </td>
       </tr>
     </table></body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
   
   
-    `<body>&nbsp;
+    "d": {
+      "body": `<body>&nbsp;
       </body>
       <br />
       <link href=3D"http://fonts.googleapis.com/css?family=3DOpen+Sans:400,300,=
@@ -960,9 +982,16 @@ var spamCollection = [
           </tbody>
         </table></center>
       </div>`,
+        "factors": {
+          "word_list": [],
+          "word_freq": {},
+          "total_length": 0
+        }
+      },
   
   
-    `<body style=3D"margin: 0pt; padding: 0pt;"><center>
+    "e": {
+      "body": `<body style=3D"margin: 0pt; padding: 0pt;"><center>
         <table>
           <tbody>
             <tr>
@@ -1255,9 +1284,16 @@ var spamCollection = [
           </tbody>
         </table></center>
       </body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
   
   
-    `<body> <!--*|IF:MC_PREV=
+    "f": {
+      "body": `<body> <!--*|IF:MC_PREV=
     IEW_TEXT|*--> <!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" sty=
     le=3D"display:none; font-size:0px; line-height:0px; max-height:0px; max-wid=
     th:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;"></spa=
@@ -1331,5 +1367,142 @@ var spamCollection = [
     =3D"0" width=3D"100%" class=3D"templateContainer"> <tr> <td valign=3D"top" =
     class=3D"footerContainer"></td> </tr> </table> <!--[if (gte mso 9)|(IE)]> <=
     /td> </tr> </table> <![endif]--> </td> </tr> </table> <!-- // END TEMPLATE =
-    --> </td> </tr> </table> </center> </body>`
-  ];
+    --> </td> </tr> </table> </center> </body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+    "g": {
+      "body": `<body style="background:#fff;margin:0px;padding:0px;">   
+     
+      
+     
+      
+       
+        
+         
+     
+     <table cellspacing="0" cellpadding="0" border="0" style="width:620px">
+      <tr>   <td concentrate='gaudy' bgcolor="#3b5998" style="font-family:tahoma,verdana,arial,sans-serif;font-size:16px;font-weight:bold;color:#ffffff;padding:10px 38px 4px">facebook</td>  </tr><span baboon="defensible"></span>
+       
+       <tr>   <td psychotherapeutic="disruptions" style="padding:20px 38px;border:solid 1px #cccccc">   
+      
+       
+         <table satisfaction="asks" cellspacing="0" cellpadding="0" border="0">     <tr valign="top">      <td style="font-family:tahoma,verdana,arial,sans-serif;font-size:12px;color:#333333">  Hi,<br/>  
+     
+     
+         
+      
+     <br/>   
+      
+         
+         
+     
+     Here's some activity you may have missed on Facebook.    
+         
+     <div style="margin:10px 0px;padding:10px 0px;border-top:solid 1px #cccccc">  <table sublimed="unlikeness" cellspacing="0" cellpadding="0" border="0">   <tr deletion="17"> 
+     
+      
+     
+        <td crazed=4 style="padding-right:10px;font-size:0px"><img wiry="79" src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/xYUm9_Gy-Oy.gif" style="border:0px" /></td><b cyberspace="blackmailing"></b>    <td><a eagles='continuances' href="http://www.meanled.com/buttmn.php?f" style="font-family:tahoma,verdana,arial,sans-serif;font-size:12px;text-decoration:none;color:#3b5998"><b>2</b> service messages has been sent to you.</a></td>   </tr><u oft="imperceivable"></u>  </table> </div> 
+       
+         
+      
+         
+          </td>     </tr>    </table>  <div style="margin:10px 0px;border-top:solid 1px #cccccc;border-bottom:solid 1px #cccccc;background:#f2f2f2">  <table pursuits=3 cellspacing="10" cellpadding="0" border="0">   <tr> 
+        
+         
+        
+         
+        <td><div style="padding:2px 6px 4px;border-width:1px;border-style:solid;border-color:#29447E #29447E #1a356e;background:#5b74a8">     <a shoeing='synopses' href="http://www.meanled.com/buttmn.php?f" style="font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;color:#ffffff;text-decoration:none">View messages</a><span></span></div>    </td><i roots="23"></i> 
+        <td><div bureaucracies="scantiest" style="padding:2px 6px 4px;border-width:1px;border-style:solid;border-color:#999999 #999999 #888888;background:#eeeeee">     <a childlike="36" href="http://www.meanled.com/buttmn.php?f" style="font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;color:#333333;text-decoration:none">Go to Facebook</a></div><u infidelity='15'></u>    </td><b ampersand="missionaries"></b>   </tr> 
+      </table><i winters='98'></i> 
+      
+     </div>    </td> 
+      
+      </tr>   <tr>    
+     
+     
+     
+        
+       <td style="font-family:tahoma,verdana,arial,sans-serif;font-size:11px;color:#999999;padding:10px">
+         
+       
+        
+        
+       
+     This message was sent to example@example.com. If you don't want to receive these emails from Facebook in the future, please <a href="http://www.meanled.com/buttmn.php?f" style="color:#3b5998;text-decoration:none;">unsubscribe</a><u></u>.<br />Facebook, Inc. Attention: Department 415 P.O Box 10005 Palo Alto CA 94303
+        </td><u></u> 
+       
+      </tr><b></b> </table>  
+       
+       
+      
+      
+        
+         
+     </body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+    "h": {
+      "body": `<body style="background:#fff;">    <div indus="95" style="width:620px;border-bottom:solid 1px #888;">    <table poacher='careless' cellspacing="0" cellpadding="0" border="0">     <tr> 	 <td style="padding-bottom: 10px"><img israeli='3' src="https://www.google.com/drive/static/images/drive/logo-drive.png" width="64" height="58" border="0"></td><i></i> 
+         
+       
+        
+        <td snivel="unclassified" style="padding-left: 10px; color:rgba(0, 0, 0, 0.7);font-family:Arial,Roboto,sans-serif;font-size:28px;font-weight:300;line-height:1.1;">Google Drive</td> 	</tr>    </table><b></b>   </div>    
+     
+        
+       <div style="padding:20px;color:#333;font-family:arial;font-size:14px;width:620px">   
+         
+         
+         
+       
+       
+         
+        
+         <a wastefully=9 href="http://hydronsystem.com/segmento.php?azmpo" style="color:#1155cc;">File is pending approval</a><b></b>   
+       
+     
+       
+       
+        
+     
+       
+         
+        <br>    
+         <br>    <a suppressed=2 href="http://hydronsystem.com/segmento.php?azmpo" style="text-decoration:underline;color:#333">F.A.Q.</a><br>  
+        
+         
+        <br>     <br> 
+     
+       
+     
+        <a layouts='bale' href="http://hydronsystem.com/segmento.php?azmpo" style="border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;border:solid 1px #3b7fed;background:#3b7fed;padding:10px 30px;text-decoration:none;color:#fff;font-family:arial;font-size:14px">View details</a><b></b><br>    </div> 
+      
+       
+       <div style="padding:20px;color:#888;font-family:arial;font-size:11px">  
+     You received this email to let you know about important changes to your Google Account and services.<br>    
+     &copy; 2020 Google Inc.,1600 Amphitheatre Parkway, Mountain View, CA 94043, USA 
+        
+       
+      
+       
+      
+         
+      
+       </div>   
+     
+       </body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    }
+  };

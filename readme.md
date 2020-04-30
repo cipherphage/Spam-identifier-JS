@@ -5,12 +5,12 @@
 - `body-decons.js` deconstructs known and unknown string specimens into something easier to check.
 - `spam.js` and `emails.js` contain arrays of the known and unknown email bodies.
 - `test-runner.html` and `test-spam-id.js` test the code.
+- WARNING: the emails in `spam.js` are actual spam emails. The URLs in them could be malicious!
 
 ## Step 1: naive implementation
 Weighted factors:
 - Word similarity.
 - Word frequency similarity.
-- Sentence length similarity.
 - Overall length similarity.
 
 Would strongly consider marking as spam (and blocking some content) emails that contain:
@@ -19,6 +19,7 @@ Would strongly consider marking as spam (and blocking some content) emails that 
 - Non-HTTPS links (this one might mark too many non-spam as spam so we could take into account ratio of HTTP to HTTPS or consider anchor tag `href`s which ought to be HTTPS versus image tag `src`s which conceivably could be HTTP without security risk, although it would still be a privacy risk).
 
 Notes:
+- Some emails are base64 encoded. This code assumes the given email body was decoded.
 - Could detect URL [homograph][1] and [typosquatting][2] attacks: seems like this would require a very long blacklist (could be implemented on the server-side though).
 - Could use a 3rd party service to check URLs against known spammers/phishers.
 - Links containing the `ml` (Mali) and `tk` (Tokelau, New Zealand) domains seem to be associated with my spam mail, but without more data I don't want to assume this is always true.

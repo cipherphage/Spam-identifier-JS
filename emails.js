@@ -1,1335 +1,822 @@
-var emailsToCheck = [
-    `<body><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"widt=
-    h:600px; max-width:600px;margin:0 auto;text-align: center;font-family: Aria=
-    l, Helvetica, sans-serif;padding-top:10px;"><tbody><tr><td><a href=3D"http:=
-    //twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/go" style=
-    =3D"text-decoration:none;display:block;color:#f4f6ff;background-color:#fe00=
-    00;text-align: center;font-size: 1em;line-height:1;font-weight: bold;paddin=
-    g:8px 0;border-bottom: 2px dotted #fff;">Get Concealed Carry Ceritification=
-     Before Anti-Gun Laws Ban Our Site!</a> <a href=3D"http://twbe4r58v1b71n.w8=
-    71a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/go" style=3D"margin:10px 0;d=
-    isplay: block;"><img alt=3D"US CONCEALED ONLINE" src=3D"http://twbe4r58v1b7=
-    1n.w871a-ec4f.mwkellqv.ml/img-ctzzcBAA3BAACWu9wUzzgXViw/uscdlogo.png" width=
-    =3D"200" height=3D"45" style=3D"display:inline-block;" /></a><table style=
-    =3D"width:600px;background-color: #34335d;color:#fefffa;padding: 8px"><tbod=
-    y><tr><td style=3D"text-align: right;"><img alt=3D"" src=3D"http://twbe4r58=
-    v1b71n.w871a-ec4f.mwkellqv.ml/img-ctzzcBAA3BAACWu9wUzzgXViw/linecrcl.jpg" w=
-    idth=3D"68" height=3D"8" /></td><td style=3D"text-align: center;"><p style=
-    =3D"font-size: 2.4em;line-height: 1;padding: 0;margin: 0;">ONLINE &amp; INS=
-    TANT</p><p style=3D"font-size: 1.24em;line-height: 1;padding: 0;margin: 0;"=
-    >CONCEALED CARRY CERTIFICATION</p></td><td style=3D"text-align: left;"><img=
-     alt=3D"" src=3D"http://twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/img-ctzzcBAA3=
-    BAACWu9wUzzgXViw/linecrclr.jpg" width=3D"68" height=3D"8" /></td></tr></tbo=
-    dy></table> <a href=3D"http://twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/ctzzcBA=
-    A3BAACWu9wUzzgXViw/go"><img alt=3D"" src=3D"http://twbe4r58v1b71n.w871a-ec4=
-    f.mwkellqv.ml/img-ctzzcBAA3BAACWu9wUzzgXViw/uscdmain.jpg" width=3D"600" hei=
-    ght=3D"251" /></a></td></tr><tr><td style=3D"padding-bottom:20px;"><p style=
-    =3D"color:#33365f;line-height: 1;font-size: 1.8em;font-weight: bold;padding=
-    :30px 0 0 0; margin: 0;">GET ARMED RESPONSIBLY &amp;</p><p style=3D"color:#=
-    33365f;line-height: 1;font-size: 1.8em;font-weight: bold;padding:0;margin: =
-    0;">CARRY WITH CONFIDENCE</p><center><p><a href=3D"http://twbe4r58v1b71n.w8=
-    71a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/go" style=3D"vertical-align:=
-    middle; text-align:center;height:35px;width:514px;padding:0px;display:table=
-    -cell;background-image: url(http://twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml//i=
-    mg-ctzzcBAA3BAACWu9wUzzgXViw/uscdfl.jpg);background-repeat: no-repeat;backg=
-    round-color: #34335d;color:#faf9ff;font-size:1.2em;line-height:1;text-decor=
-    ation:none;font-weight: normal;white-space: nowrap;margin: 20px 0 0 0;backg=
-    round-size: cover;">VALID &amp; RECOGNIZED IN 70% OF U.S.A</a></p></center>=
-    <div style=3D"text-align: left;padding: 16px 0px 0 16px;"><h2 style=3D"font=
-    -size:1.6em;line-height:1;color:#30304a;">Why Get Concealed Carry Certifica=
-    tion Today?</h2><p style=3D"font-size: 1.28em;color:#494949;">Anti-Gun Grou=
-    ps are trying to take away your 2nd Amendement rights. However, due to a le=
-    gal loophole, you can still reserve your right to carry a gun, but only for=
-     a limited time! So act now while the window Is still open!</p></div></td><=
-    /tr><tr><td style=3D"background-color: #34335d;color:#fffff8;text-align: le=
-    ft;padding-bottom:10px;"><p style=3D"font-size: 1.4em;font-weight: bold;mar=
-    gin:0;padding: 20px;">Why Choose US Concealed Carry Certification?</p><tabl=
-    e style=3D"padding-left: 20px;"><tbody><tr><td><img alt=3D"" src=3D"http://=
-    twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/img-ctzzcBAA3BAACWu9wUzzgXViw/uscdchk=
-    .jpg" width=3D"36" height=3D"30" /></td><td style=3D"padding-top: 22px;"><p=
-     style=3D"margin:0;padding: 0;font-size: 1.3em;line-height: 1;color:#fffff8=
-    ;">Online Training &amp; Certification</p><p style=3D"margin:0;padding: 0;f=
-    ont-size: 1em;line-height: 1;color:#f4f9f3;">No lines, no classes, no gun r=
-    ange time needed</p></td></tr><tr><td><img alt=3D"" src=3D"http://twbe4r58v=
-    1b71n.w871a-ec4f.mwkellqv.ml/img-ctzzcBAA3BAACWu9wUzzgXViw/uscdchk.jpg" wid=
-    th=3D"36" height=3D"30" /></td><td style=3D"padding-top: 22px;"><p style=3D=
-    "margin:0;padding: 0;font-size: 1.3em;line-height: 1;color:#fffff8;">No Gov=
-    ernment Red Tape</p><p style=3D"margin:0;padding: 0;font-size: 1em;line-hei=
-    ght: 1;color:#f4f9f3;">No background checks or exposing private info to fed=
-    s.</p></td></tr><tr><td><img alt=3D"" src=3D"http://twbe4r58v1b71n.w871a-ec=
-    4f.mwkellqv.ml/img-ctzzcBAA3BAACWu9wUzzgXViw/uscdchk.jpg" width=3D"36" heig=
-    ht=3D"30" /></td><td style=3D"padding-top: 22px;"><p style=3D"margin:0;padd=
-    ing: 0;font-size: 1.3em;line-height: 1;color:#fffff8;">Concealed Carry Perm=
-    it Valid in 70% U.S. States</p><p style=3D"margin:0;padding: 0;font-size: 1=
-    em;line-height: 1;color:#f4f9f3;">Get armed responsibly &amp; never get arr=
-    ested for carrying</p></td></tr><tr><td>&nbsp;</td><td style=3D"padding-top=
-    : 22px;"><p style=3D"margin:0;padding: 0;font-size: 1em;line-height: 1;colo=
-    r:#fde910;">Hurry! Get Certified Before Anti-Gun Groups Shut Us Down!</p></=
-    td></tr></tbody></table><div style=3D"width:100%;text-align:center;padding:=
-    10px 0 10px 16px;"><a href=3D"http://twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/=
-    ctzzcBAA3BAACWu9wUzzgXViw/go" style=3D"padding:0;display:table-cell;vertica=
-    l-align:middle;background-image: url(http://twbe4r58v1b71n.w871a-ec4f.mwkel=
-    lqv.ml//img-ctzzcBAA3BAACWu9wUzzgXViw/uscdbtn.jpg);background-repeat: no-re=
-    peat;background-color: #3eaa18;color:#faf9ff;font-size:1.3em;line-height:1;=
-    text-decoration:none;font-weight: bold;white-space: nowrap;margin: 0;backgr=
-    ound-size: cover;width:567px;height:57px;text-align:center;">Get Your Conce=
-    aled Carry Certification Today!</a></div></td></tr><tr><td align=3D"center"=
-     class=3D"padLR" style=3D"color: #aaa; font-size: 11px; line-height: 20px;p=
-    adding-top:10px;"><p style=3D"margin-top: 0px; margin-bottom: 10px;">=F0=9D=
-    =98=9B=F0=9D=98=A9=F0=9D=98=AA=F0=9D=98=B4 =F0=9D=98=AE=F0=9D=98=A6=F0=9D=
-    =98=B4=F0=9D=98=B4=F0=9D=98=A2=F0=9D=98=A8=F0=9D=98=A6 =F0=9D=98=AA=F0=9D=
-    =98=B4 =F0=9D=98=A2=F0=9D=98=AF =F0=9D=98=A2=F0=9D=98=A5=F0=9D=98=B7=F0=9D=
-    =98=A6=F0=9D=98=B3=F0=9D=98=B5=F0=9D=98=AA=F0=9D=98=B4=F0=9D=98=A6=F0=9D=98=
-    =AE=F0=9D=98=A6=F0=9D=98=AF=F0=9D=98=B5. =F0=9D=98=90=F0=9D=98=A7 =F0=9D=98=
-    =BA=F0=9D=98=B0=F0=9D=98=B6 =F0=9D=98=B8=F0=9D=98=B0=F0=9D=98=B6=F0=9D=98=
-    =AD=F0=9D=98=A5 =F0=9D=98=B1=F0=9D=98=B3=F0=9D=98=A6=F0=9D=98=A7=F0=9D=98=
-    =A6=F0=9D=98=B3 =F0=9D=98=AF=F0=9D=98=B0=F0=9D=98=B5 =F0=9D=98=B5=F0=9D=98=
-    =B0 =F0=9D=98=B3=F0=9D=98=A6=F0=9D=98=A4=F0=9D=98=A6=F0=9D=98=AA=F0=9D=98=
-    =B7=F0=9D=98=A6 =F0=9D=98=A7=F0=9D=98=B6=F0=9D=98=B5=F0=9D=98=B6=F0=9D=98=
-    =B3=F0=9D=98=A6 =F0=9D=98=A6=F0=9D=98=AE=F0=9D=98=A2=F0=9D=98=AA=F0=9D=98=
-    =AD=F0=9D=98=B4 =F0=9D=98=A7=F0=9D=98=B3=F0=9D=98=B0=F0=9D=98=AE =F0=9D=98=
-    =B6=F0=9D=98=B4, =F0=9D=98=B0=F0=9D=98=B3 =F0=9D=98=AA=F0=9D=98=A7 =F0=9D=
-    =98=BA=F0=9D=98=B0=F0=9D=98=B6&#39;=F0=9D=98=B7=F0=9D=98=A6 =F0=9D=98=A4=F0=
-    =9D=98=A9=F0=9D=98=A2=F0=9D=98=AF=F0=9D=98=A8=F0=9D=98=A6=F0=9D=98=A5 =F0=
-    =9D=98=BA=F0=9D=98=B0=F0=9D=98=B6=F0=9D=98=B3 =F0=9D=98=A6=F0=9D=98=AE=F0=
-    =9D=98=A2=F0=9D=98=AA=F0=9D=98=AD =F0=9D=98=A2=F0=9D=98=A5=F0=9D=98=A5=F0=
-    =9D=98=B3=F0=9D=98=A6=F0=9D=98=B4=F0=9D=98=B4 =F0=9D=98=B1=F0=9D=98=AD=F0=
-    =9D=98=A6=F0=9D=98=A2=F0=9D=98=B4=F0=9D=98=A6 =F0=9D=98=B6=F0=9D=98=AF=F0=
-    =9D=98=B4=F0=9D=98=B6=F0=9D=98=A3=F0=9D=98=B4=F0=9D=98=A4=F0=9D=98=B3=F0=9D=
-    =98=AA=F0=9D=98=A3=F0=9D=98=A6 =F0=9D=98=A3=F0=9D=98=A6=F0=9D=98=AD=F0=9D=
-    =98=B0=F0=9D=98=B8 =F0=9D=98=B0=F0=9D=98=B3 =F0=9D=98=B8=F0=9D=98=B3=F0=9D=
-    =98=AA=F0=9D=98=B5=F0=9D=98=A6 =F0=9D=98=B5=F0=9D=98=B0 =F0=9D=98=B6=F0=9D=
-    =98=B4 =F0=9D=98=A2=F0=9D=98=B5: <a class=3D"appleFooter" href=3D"http://tw=
-    be4r58v1b71n.w871a-ec4f.mwkellqv.ml/" style=3D"color: #aaa;">297 =F0=9D=98=
-    =92=F0=9D=98=AA=F0=9D=98=AF=F0=9D=98=A8=F0=9D=98=B4=F0=9D=98=A3=F0=9D=98=B6=
-    =F0=9D=98=B3=F0=9D=98=BA =F0=9D=98=8E=F0=9D=98=B3=F0=9D=98=A2=F0=9D=98=A5=
-    =F0=9D=98=A6, =F0=9D=98=9A=F0=9D=98=B6=F0=9D=98=AA=F0=9D=98=B5=F0=9D=98=A6 =
-    1163 =F0=9D=98=9A=F0=9D=98=B5=F0=9D=98=A2=F0=9D=98=B5=F0=9D=98=A6=F0=9D=98=
-    =AD=F0=9D=98=AA=F0=9D=98=AF=F0=9D=98=A6 =F0=9D=98=95=F0=9D=98=9D 89449.</a>=
-    </p><p style=3D"margin-top: 0px; margin-bottom: 10px;"><a href=3D"http://tw=
-    be4r58v1b71n.w871a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/unsub" style=
-    =3D"color: #aaa"><strong>Unsubscribe</strong></a></p><p style=3D"margin-top=
-    : 0px; margin-bottom: 10px;">&copy; 2020 =F0=9D=98=88=F0=9D=98=AD=F0=9D=98=
-    =AD =F0=9D=98=B3=F0=9D=98=AA=F0=9D=98=A8=F0=9D=98=A9=F0=9D=98=B5=F0=9D=98=
-    =B4 =F0=9D=98=B3=F0=9D=98=A6=F0=9D=98=B4=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=
-    =B7=F0=9D=98=A6=F0=9D=98=A5</p><br />&nbsp;</td></tr><tr><td align=3D"cente=
-    r"><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><div style=3D"min-height:180px;he=
-    ight:180px;margin:60px;">&nbsp;<img alt=3D"" border=3D"0" src=3D"http://twb=
-    e4r58v1b71n.w871a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/t.gif" style=
-    =3D"height:1px;width:1px;" /></div><p class=3D"piquedcontinued"><a href=3D"=
-    http://twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/pref=
-    "><img alt=3D"" src=3D"http://twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/img-ctz=
-    zcBAA3BAACWu9wUzzgXViw/rmvaddr.gif" width=3D"314" height=3D"26" /></a></p><=
-    /td></tr></tbody></table></body>
-    </html>`,
-  
-  
-    `<table class=3D"body" data-made-with-foundation=3D"" style=3D"margin:0 auto=
-    ;">
-      <tbody>
-        <tr>
-          <td align=3D"center" class=3D"float-center" valign=3D"top">
-            <table align=3D"center" class=3D"wrapper header float-center">
-              <tbody>
-                <tr>
-                  <td class=3D"wrapper-inner">
-                    <table align=3D"center" class=3D"container">
-                      <tbody>
-                        <tr>
-                          <td>
-                            <table class=3D"row collapse">
-                              <tbody>
-                                <tr>
-                                  <th class=3D"small-6 large-6 columns first">
-                                    <table>
-                                      <tbody>
-                                        <tr>
-                                          <th><a href=3D"http://fzb4v0205e15l5.=
-    w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go"><img alt=3D"" src=3D"http://fzb4=
-    v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/klogo.jpg" width=3D"2=
-    78" height=3D"56" /> </a>
-                                          </th>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </th>
-                                  <th class=3D"small-6 large-6 columns last">
-                                    <table>
-                                      <tbody>
-                                        <tr>
-                                          <th><a href=3D"http://fzb4v0205e15l5.=
-    w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go" style=3D"text-align: right; disp=
-    lay: block; padding-left: 20px;"><img alt=3D"" src=3D"http://fzb4v0205e15l5=
-    .w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/cta1.jpg" width=3D"289" height=
-    =3D"56" /> </a>
-                                          </th>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </th>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table align=3D"center" class=3D"container float-center">
-              <tbody>
-                <tr>
-                  <td>
-                    <table class=3D"spacer">
-                      <tbody>
-                        <tr>
-                          <td height=3D"16px" style=3D"font-size:16px;line-heig=
-    ht:16px;">&nbsp;
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table class=3D"row">
-                      <tbody>
-                        <tr>
-                          <th class=3D"small-12 large-12 columns first last">
-                            <table>
-                              <tbody>
-                                <tr>
-                                  <th><center><a href=3D"http://fzb4v0205e15l5.=
-    w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go"><img alt=3D"" src=3D"http://fzb4=
-    v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/banner.jpg" width=3D"=
-    650" height=3D"285" /> </a></center>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"16px" style=3D"font-siz=
-    e:16px;line-height:16px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <h1 class=3D"text-center">We Will Not Let O=
-    ur Hair Define Our Age!
-                                    </h1>
-                                    <p class=3D"lead text-center">Turn back the=
-     clock and regrow thicker, fuller, shinier hair with Keranique&reg;
-                                    </p><center><a href=3D"http://fzb4v0205e15l=
-    5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go"><img alt=3D"" src=3D"http://fz=
-    b4v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/product.jpg" width=
-    =3D"650" height=3D"531" /> </a></center><center><a href=3D"http://fzb4v0205=
-    e15l5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go"><img alt=3D"" src=3D"http:=
-    //fzb4v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/cta2.jpg" width=
-    =3D"524" height=3D"91" /> </a></center>
-                                  </th>
-                                  <th class=3D"expander">&nbsp;
-                                  </th>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </th>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table class=3D"row">
-                      <tbody>
-                        <tr>
-                          <th class=3D"small-12 large-12 columns first last">
-                            <table>
-                              <tbody>
-                                <tr>
-                                  <th>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"16px" style=3D"font-siz=
-    e:16px;line-height:16px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <p class=3D"text-center" style=3D"font-size=
-    : 20px">Keranique&reg; Hair Regrowth System
-                                    </p>
-                                    <h3 class=3D"text-center">Trusted by Over 1=
-    ,976,077 Women!
-                                    </h3>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"16px" style=3D"font-siz=
-    e:18px;line-height:16px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <p class=3D"text-left list-mark" style=3D"m=
-    argin-left: 5px"><img alt=3D"" src=3D"http://fzb4v0205e15l5.w1.jvquh9ig.tk/=
-    img-cQQIBAPnAAACFu9wUqCHqjQ/check.jpg" width=3D"31" height=3D"30" /><span c=
-    lass=3D"auto-style2">FDA Approved Ingredient to Regrow Hair</span>
-                                    </p>
-                                    <p class=3D"text-left list-mark" style=3D"m=
-    argin-left: 5px"><img alt=3D"" src=3D"http://fzb4v0205e15l5.w1.jvquh9ig.tk/=
-    img-cQQIBAPnAAACFu9wUqCHqjQ/check.jpg" width=3D"31" height=3D"30" /><span c=
-    lass=3D"auto-style2">Clinically Proven to Work for All Hair Types</span>
-                                    </p>
-                                    <p class=3D"text-left list-mark" style=3D"m=
-    argin-left: 5px"><img alt=3D"" src=3D"http://fzb4v0205e15l5.w1.jvquh9ig.tk/=
-    img-cQQIBAPnAAACFu9wUqCHqjQ/check.jpg" width=3D"31" height=3D"30" /><span c=
-    lass=3D"auto-style2">Gentle for Color Treated Hair</span>
-                                    </p>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"16px" style=3D"font-siz=
-    e:16px;line-height:16px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table><center><a href=3D"http://fzb4v0205=
-    e15l5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go"><img alt=3D"" src=3D"http:=
-    //fzb4v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/slider.jpg" wid=
-    th=3D"650" height=3D"780" /> </a></center>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"32px" style=3D"font-siz=
-    e:32px;line-height:32px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </th>
-                                  <th class=3D"expander">&nbsp;
-                                  </th>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </th>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table align=3D"center" class=3D"row">
-                      <tbody>
-                        <tr>
-                          <th class=3D"small-12 large-12 columns first last">
-                            <table align=3D"center">
-                              <tbody>
-                                <tr>
-                                  <th>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"16px" style=3D"font-siz=
-    e:16px;line-height:16px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table><center><a href=3D"http://fzb4v0205=
-    e15l5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go"><img alt=3D"" src=3D"http:=
-    //fzb4v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/cta2.jpg" width=
-    =3D"524" height=3D"91" /> </a></center>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"32px" style=3D"font-siz=
-    e:32px;line-height:32px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table><center><img alt=3D"" src=3D"http:/=
-    /fzb4v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wUqCHqjQ/stars-big.jpg" w=
-    idth=3D"250" height=3D"47" /></center>
-                                    <h3 class=3D"text-center">4.9 Star out of 5
-                                    </h3>
-                                    <p class=3D"text-center">Real Users - 100% =
-    Real Results
-                                    </p>
-                                  </th>
-                                  <th class=3D"expander">&nbsp;
-                                  </th>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </th>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <table align=3D"center" class=3D"row">
-                      <tbody>
-                        <tr>
-                          <th class=3D"small-12 large-12 columns first last">
-                            <table align=3D"center">
-                              <tbody>
-                                <tr>
-                                  <th><center><a class=3D"semi-bold" href=3D"ht=
-    tp://fzb4v0205e15l5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/go">Click Here t=
-    o fight back against hair loss</a></center>
-                                    <table class=3D"spacer">
-                                      <tbody>
-                                        <tr>
-                                          <td height=3D"32px" style=3D"font-siz=
-    e:32px;line-height:32px;">&nbsp;
-                                          </td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                  </th>
-                                  <th class=3D"expander">&nbsp;
-                                  </th>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <br><br>
-                            <p>
-                              &nbsp;
-                            </p>
-                            <p style=3D"text-align:center;">=F0=9D=98=90=F0=9D=
-    =98=A7 =F0=9D=98=BA=F0=9D=98=B0=F0=9D=98=B6 =F0=9D=98=B8=F0=9D=98=B0=F0=9D=
-    =98=B6=F0=9D=98=AD=F0=9D=98=A5 =F0=9D=98=AF=F0=9D=98=B0 =F0=9D=98=AD=F0=9D=
-    =98=B0=F0=9D=98=AF=F0=9D=98=A8=F0=9D=98=A6=F0=9D=98=B3 =F0=9D=98=AD=F0=9D=
-    =98=AA=F0=9D=98=AC=F0=9D=98=A6 =F0=9D=98=B5=F0=9D=98=B0 =F0=9D=98=B3=F0=9D=
-    =98=A6=F0=9D=98=A4=F0=9D=98=A6=F0=9D=98=AA=F0=9D=98=B7=F0=9D=98=A6 =F0=9D=
-    =98=A6=F0=9D=98=AE=F0=9D=98=A2=F0=9D=98=AA=F0=9D=98=AD =F0=9D=98=A2=F0=9D=
-    =98=A5=F0=9D=98=B7=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=B5=F0=9D=98=AA=F0=9D=98=
-    =B4=F0=9D=98=A6=F0=9D=98=AE=F0=9D=98=A6=F0=9D=98=AF=F0=9D=98=B5=F0=9D=98=B4
-                              <br />=F0=9D=98=A7=F0=9D=98=B3=F0=9D=98=B0=F0=9D=
-    =98=AE =F0=9D=98=8E=F0=9D=98=A6=F0=9D=98=B5=F0=9D=98=92=F0=9D=98=A6=F0=9D=
-    =98=B3=F0=9D=98=A2=F0=9D=98=AF=F0=9D=98=AA=F0=9D=98=B2=F0=9D=98=B6=F0=9D=98=
-    =A6,&nbsp;<a href=3D"http://fzb4v0205e15l5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wU=
-    qCHqjQ/unsub">=F0=9D=98=A4=F0=9D=98=AD=F0=9D=98=AA=F0=9D=98=A4=F0=9D=98=AC =
-    =F0=9D=98=A9=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=A6</a> =F0=9D=98=B0=F0=9D=98=
-    =B3 =F0=9D=98=B8=F0=9D=98=B3=F0=9D=98=AA=F0=9D=98=B5=F0=9D=98=A6 =F0=9D=98=
-    =B5=F0=9D=98=B0 =F0=9D=98=B6=F0=9D=98=B4 =F0=9D=98=A2=F0=9D=98=B5:
-                              <br />=F0=9D=98=97=F0=9D=98=96 =F0=9D=98=89=F0=9D=
-    =98=96=F0=9D=98=9F 1366, =F0=9D=98=8F=F0=9D=98=B0=F0=9D=98=A3=F0=9D=98=B0=
-    =F0=9D=98=AC=F0=9D=98=A6=F0=9D=98=AF, =F0=9D=98=95=F0=9D=98=91 07030.
-                              <br />=F0=9D=98=9B=F0=9D=98=A9=F0=9D=98=AA=F0=9D=
-    =98=B4 =F0=9D=98=AA=F0=9D=98=B4 =F0=9D=98=A2=F0=9D=98=AF =F0=9D=98=88=F0=9D=
-    =98=A5=F0=9D=98=B7=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=B5=F0=9D=98=AA=F0=9D=98=
-    =B4=F0=9D=98=A6=F0=9D=98=AE=F0=9D=98=A6=F0=9D=98=AF=F0=9D=98=B5.
-                            </p>
-                          </th>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>      <p>&nbsp;
-                                        </p>            <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                      =20
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p><img height=3D"1" src=3D"http://fzb=
-    4v0205e15l5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/t.gif" style=3D"width:1p=
-    x;height:1px;" width=3D"1" />
-                                        <p style=3D"text-align:center;"><a href=
-    =3D"http://fzb4v0205e15l5.w1.jvquh9ig.tk/cQQIBAPnAAACFu9wUqCHqjQ/pref"><img=
-     alt=3D"" src=3D"http://fzb4v0205e15l5.w1.jvquh9ig.tk/img-cQQIBAPnAAACFu9wU=
-    qCHqjQ/rmvaddr.gif" width=3D"314" height=3D"26" /></a>
-                                        </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>`,
-  
-  
-    `<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #e6e6e6; margin: 0px; padding: 0px;" bgcolor="#e6e6e6">
-    <table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
-    <tr>
-    <td class="preheader-container">
-    <div>
-    <div id="preheader" style="display: none; font-size: 1px; color: transparent; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
-    <span data-entity-ref="preheader">Toymail</span>
-    </div>
-    <img src="http://r20.rs6.net/on.jsp?ca=e11867a7-d734-4547-9873-e68b35ecbf96&a=1134130596141&c=e749cc5c-7e90-11ea-acf4-d4ae529a7b12&ch=e8010840-7e90-11ea-acf4-d4ae529a7b12" / alt="">
-    </div>
-    </td>
-    </tr>
-    <tr>
-    <td class="template-shell-container" align="center">
-    <div class="bgcolor" style="background-color: #e6e6e6;">
-    <table class="bgimage" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #e6e6e6;" bgcolor="#e6e6e6">
-    <tbody>
-    <tr>
-    <td align="center">
-    <table class="main-width" width="612" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 612px;">
-    <tbody>
-    <tr>
-    <td class="layout" valign="top" align="center" style="padding: 15px 5px;">
-    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
-    <tbody>
-    <tr>
-    <td class="layout-container-border" valign="top" align="center" style="background-color: #869198; padding: 1px;" bgcolor="#869198">
-    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #869198;" bgcolor="#869198">
-    <tbody>
-    <tr>
-    <td class="layout-container" valign="top" align="center" style="background-color: #ffffff; padding: 0px;" bgcolor="#ffffff">
-    <div class="">
-    <table class="galileo-ap-layout-editor" width="100%" cellspacing="0" cellpadding="0" border="0" style="min-width: 100%;">
-    <tbody>
-    <tr>
-    <td class=" editor-col OneColumnMobile" width="100%" valign="top" align="">
-    <div class="gl-contains-image">
-    <table class="editor-image logo-container editor-image-vspace-on" style="min-width: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
-    <tbody>
-    <tr>
-    <td valign="top" align="center" style="padding-top: 10px; padding-bottom: 10px;">
-    <div class="publish-container">
-    <a href="http://r20.rs6.net/tn.jsp?f=001lh4KfJjB_v9YLmoOX1yMilhRRDqJAehubAwdqu8Wlz9RQ4jXZWi8AvWWPWtXTCt7uTY25HGGQBOa6hp-CcfVNTkYahvjhItSpBOewrm1Fxdure_zszFDU2fViBngpPIt2E4kDBCYVIUUWbSQMFvYhYCBZKGGSJnhJEftPzIu1_4=&c=lZS6KKSH3zDsPHlYynRo3vK39k9hoZzslOI0oZOoB1SDqxIQiy8Zgw==&ch=zxrQ3FH-iqYf_zqnji9l0vzf8wq-1_87yZQukLTfdHkWgEjz0QFxxQ==">
-    <img alt="" class="" style="display: block; height: auto; max-width: 100%;" src="https://files.constantcontact.com/d29837f0801/f68540ba-bef3-4eb5-a7d7-6e17d2884245.png" width="600" vspace="0" hspace="0" border="0">
-    </a>
-    </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <table class="galileo-ap-layout-editor" width="100%" cellspacing="0" cellpadding="0" border="0" style="min-width: 100%;">
-    <tbody>
-    <tr>
-    <td class=" editor-col OneColumnMobile" width="100%" valign="top" align="">
-    <div class="gl-contains-text">
-    <table style="min-width: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
-    <tbody>
-    <tr>
-    <td class="editor-text editor-text " valign="top" align="left" style="font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #403F42; text-align: left; display: block; word-wrap: break-word; line-height: 1.2; padding: 10px 20px;">
-    <div></div>
-    <div class="text-container galileo-ap-content-editor"><div>
-    <div><span style="font-size: 10px;">The entire content of this email message is confidential. This also applies to any files attached to it. This email is intended for an individual or entity to whom they are addressed. In case you are not the addressee of this email, and you have received it in error, immediately contact the system manager. The information in this email is very sensitive, and it is intended for the specific addressee. This email should not be disseminated, distributed or copied. If you have received this email and it was not for you, make sure to immediately notify the sender by email and afterwards delete this email from your system. Disclosing, copying, distributing, or taking any action in reliance to the email content is strictly prohibited. Consider yourself notified.</span></div>
-    <div><br></div>
-    </div></div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </td>
-    </tr>
-    <tr>
-    <td></td>
-    </tr>
-    </table>
-    <table class="footer-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; margin-left: auto; margin-right: auto; table-layout: auto !important" bgcolor="#ffffff">
-      <tr>
-        <td width="100%" align="center" valign="top" style="width: 100%;">
-          <div class="footer-max-main-width" align="center" style="margin-left: auto; margin-right: auto; max-width: 100%;">
-            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-              <tr>
-                <td class="footer-layout" align="center" valign="top" style="padding: 16px 0px;">
-                  <table class="footer-main-width" style="width: 580px;" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
-                        
-                        <span class="footer-column">Armanino LLP, Authorized Representatives for Toymail (ABC), LLC.<span class="footer-mobile-hidden"> | </span></span><span class="footer-column">231 Market Place<span class="footer-mobile-hidden">, </span></span><span class="footer-column">Ste. 373<span class="footer-mobile-hidden">, </span></span><span class="footer-column"></span><span class="footer-column">San Ramon, CA 94583</span><span class="footer-column"></span>
-                        
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="footer-row" align="center" valign="top" style="padding: 10px 0px;">
-                        <table cellpadding="0" cellspacing="0" border="0">
-                          <tr>
-                            <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
-                              <a href="https://visitor.constantcontact.com/do?p=un&m=001fw7lzBT8cETZof_RDkY7mw%3D&ch=e8010840-7e90-11ea-acf4-d4ae529a7b12&ca=e11867a7-d734-4547-9873-e68b35ecbf96" style="color: #5d5d5d">Unsubscribe j3pydev@gmail.com</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
-                              <a href="https://visitor.constantcontact.com/do?p=oo&m=001fw7lzBT8cETZof_RDkY7mw%3D&ch=e8010840-7e90-11ea-acf4-d4ae529a7b12&ca=e11867a7-d734-4547-9873-e68b35ecbf96" style="color: #5d5d5d">Update Profile</a> |
-                              
-                              <a class="footer-about-provider" href="http://www.constantcontact.com/legal/about-constant-contact" style="color: #5d5d5d">About Constant Contact</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
-                              Sent by
-                              
-                              <a href="mailto:help@toymailco.com" style="color: #5d5d5d; text-decoration: none">help@toymailco.com</a>
-                              
+var emailsToCheck = {
+    "a": {
+      "body": `Hi,=20
+    We have you scheduled to come in this Thursday March 19th at 10am for a cle=
+    aning but our office will be closed for the next two weeks. We will re-open=
+     Monday April 6th. We would like to reschedule your appointment for some ti=
+    me then. Please give us a call to reschedule.=C2=A0
+    Thanks!
     
-                              
-                              
-                              <span class="footer-column">in collaboration with</span>
-                              
-                              
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="footer-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 12px; padding: 4px 0px;">
-                        
-                        
-                        <table width="240" cellpadding="0" cellspacing="0" border="0">
-                          <tr>
-                            <td align="center" valign="top" style="padding: 0px 0px 3px 10px;">
-                              <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">
-                                <img alt="Trusted Email from Constant Contact - Try it FREE today." width="211" border="0" hspace="0" vspace="0" src="https://imgssl.constantcontact.com/ui/images1/logo_ctct_2x.png"></a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="footer-cta-text" align="center" valign="top" style="color: #5d5d5d; font-family: Verdana,Geneva,sans-serif; font-size: 9px;">
-                              <a href="http://www.constantcontact.com/index.jsp?cc=nge&rmc=VF19_3GE" style="color: #5d5d5d; text-decoration: none">Try email marketing for free today!</a>
-                            </td>
-                          </tr>
-                        </table>
-                        
-                        
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </td>
-      </tr>
-    </table></body>`,
-  
-  
-    `<body>&nbsp;
-      </body>
-      <br />
-      <link href=3D"http://fonts.googleapis.com/css?family=3DOpen+Sans:400,300,=
-    600,700" rel=3D"stylesheet" type=3D"text/css" />
-      <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type" =
-    />
-      <meta content=3D"initial-scale=3D1.0" name=3D"viewport" />
-      <style type=3D"text/css">* {
-        -webkit-text-size-adjust: none;
+    *To cancel or reschedule your appointment, please call within 24 hours to a=
+    void a $50 cancellation fee.Dark Side Dental Inc. 314 Crater St=
+    . 3rd Fl Sea of Tranquility, Moon =C2=A0www.google.com=C2=A0`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
       }
-        .ExternalClass * {
-          line-height: 120% !important}
-      </style>
-      <div id=3D"formerlyEducation">&nbsp;<center>
-        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
-    " id=3D"wrapper" style=3D"margin: 0pt; padding: 0pt;" width=3D"100%">
-          <tbody>
-            <tr valign=3D"top">
-              <td align=3D"center">
-                <table style=3D"width:100%">
-                  <tbody>
-                    <tr>
-                      <td width=3D"100%">
-                        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
-     class=3D"resourcesHeart" style=3D"width: 620px;margin:0 auto;" width=3D"62=
-    0">
-                          <tbody>
-                            <tr><td>
-                              <table width=3D"100%" border=3D"0" cellpadding=3D=
-    "0" cellspacing=3D"0">
-                                <tr>
-                                  <td style=3D"padding:5px 15px 5px; padding-le=
-    ft: 15px;"><a href=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/cYzsUAALL=
-    AAABWu9wUHsghiw/go" style=3D"display: inline-block; text-decoration: none; =
-    color: #ff8300; font-size:38px; line-height: 38px;  "><span style=3D"font-w=
-    eight:bold;">viv</span><span style=3D"font-weight:bold;">int</span>.<span>S=
-    mart</span>Home<sup style=3D"; font-size:10px; line-height: 10px;">&reg;</s=
-    up> </a>
-                              </td>
-     <td align=3D"right" valign=3D"top"  style=3D"font-family: Helvetica, Arial=
-    , Sans-Serif; text-align: right; color:#005FAA; font-weight: normal; font-s=
-    ize: 24px; word-break: keep-all;"><a href=3D"http://ojb599881y128m.w2aa-e12=
-    7.dqgh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/go" style=3D"text-decoration: none;c=
-    olor:#005FAA;"><strong>=F0=9D=9F=AD-=F0=9D=9F=B4=F0=9D=9F=B4=F0=9D=9F=B4-=
-    =F0=9D=9F=B4=F0=9D=9F=B5=F0=9D=9F=B5-=F0=9D=9F=AF=F0=9D=9F=AD=F0=9D=9F=B1=
-    =F0=9D=9F=B4</strong></a></td>
+    },
+
+    
+    "b": {
+      "body": `<body><div class=3D"ydpb945f720yahoo-style-wrap" style=
+    =3D"font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px=
+    ;"><div dir=3D"ltr" data-setdir=3D"false"><div dir=3D"ltr" data-setdir=3D"f=
+    alse">Hi,</div> <div><div><br></div><div>We have you scheduled to co=
+    me in this Thursday March 19th at 10am for a cleaning but our office will b=
+    e closed for the next two weeks. We will re-open Monday April 6th. We would=
+     like to reschedule your appointment for some time then. Please give us a c=
+    all to reschedule.&nbsp;</div><div><br></div><div>Thanks!</div></div><div d=
+    ir=3D"ltr" data-setdir=3D"false"><br></div><div><br></div><div class=3D"ydp=
+    b945f720signature"><div><font size=3D"4" face=3D"garamond, new york, times,=
+     serif">*To cancel or reschedule your appointment, please call within 24 ho=
+    urs to avoid a $50 cancellation fee.<var id=3D"ydpb945f720yui-ie-cursor"></=
+    var></font></div><div style=3D"color:rgb(0, 0, 0);font-family:garamond, new=
+     york, times, serif;font-size:18.06px;font-style:normal;background-color:tr=
+    ansparent;"><font size=3D"4" face=3D"garamond, new york, times, serif">Sout=
+    h Beach Dental Inc.</font></div><div><font size=3D"4" face=3D"Garamond">Bea=
+    con Suites</font></div><div><font size=3D"4" face=3D"garamond, new york, ti=
+    mes, serif">Dark Side Dental Inc. 314 Crater St=
+    . 3rd Fl Sea of Tranquility, Moon <div><a href=3D"http://www.google=
+    .com/" rel=3D"nofollow" target=3D"_blank"><font size=3D"4" face=3D=
+    "garamond, new york, times, serif">www.google.com</font></a></div=
+    ><div><font face=3D"Arial"></font>&nbsp;</div></div></div></div></body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+  
+  
+    "c": {
+      "body": `<body styl=
+    e=3D"margin: 0; padding: 0;" bgcolor=3D#FFFFFF><img src=3Dhttps://notificat=
+    ions.googleapis.com/email/t/AFG8qyX-TaWrq8SBsUK1fL8wv4n0TKu4iWCUvRQK1BXm-_j=
+    aPDig8bJ6Xa4B5RCV2h0tmmm2_lw4A-W0RpgxMuGQ9Y8VqoEkWBWGAyiMMrU5bWUw3z9zd4VhH5=
+    qN2WnfUxwfam6dSRR8PE1IRUDdx97h5yQ8fFqlTUcMHQkaAZk0MkXPvwhkxt8tjr2m7hJIk-Ybt=
+    JgOCNxhO4eLVdQ3viZmLcp9bis3zC66AtjszZQajGFWri5DZ7MdNA/a.gif width=3D1 heigh=
+    t=3D1><table width=3D100% height=3D100% style=3D"min-width: 348px;" border=
+    =3D0 cellspacing=3D0 cellpadding=3D0 lang=3Den><tr height=3D32 style=3D"hei=
+    ght: 32px;"><td></td></tr><tr align=3Dcenter><td><div itemscope itemtype=3D=
+    //schema.org/EmailMessage><div itemprop=3Daction itemscope itemtype=3D//sch=
+    ema.org/ViewAction><link itemprop=3Durl href=3Dhttps://accounts.google.com/=
+    AccountChooser?Email=3Dexamp@example.com&amp;continue=3Dhttps://myaccount.g=
+    oogle.com/alert/nt/1575407395000?rfn%3D31%26rfnc%3D1%26eid%3D-4851679805108=
+    259944%26et%3D0%26anexp%3Dhsc-control_a--staticndn-control /><meta itemprop=
+    =3Dname content=3D"Review Activity" /></div></div><table border=3D0 cellspa=
+    cing=3D0 cellpadding=3D0 style=3D"padding-bottom: 20px; max-width: 516px; m=
+    in-width: 220px;"><tr><td width=3D8 style=3D"width: 8px;"></td><td><div sty=
+    le=3D"border-style: solid; border-width: thin; border-color:#dadce0; border=
+    -radius: 8px; padding: 40px 20px;" align=3Dcenter class=3Dmdv2rw><img src=
+    =3Dhttps://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_7=
+    4x24dp.png srcset=3D"https://www.gstatic.com/images/branding/googlelogo/2x/=
+    googlelogo_color_74x24dp.png 2x" width=3D74 height=3D24 aria-hidden=3Dtrue =
+    style=3D"margin-bottom: 16px;" alt=3DGoogle><div style=3D"font-family: &#39=
+    ;Google Sans&#39;,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border-bott=
+    om: thin solid #dadce0; color: rgba(0,0,0,0.87); line-height: 32px; padding=
+    -bottom: 24px;text-align: center; word-break: break-word;"><div style=3D"fo=
+    nt-size: 24px;">New device signed in&nbsp;to</div><table align=3Dcenter sty=
+    le=3Dmargin-top:8px;><tr style=3D"line-height: normal;"><td align=3Dright s=
+    tyle=3Dpadding-right:8px;><img width=3D20 height=3D20 style=3D"width: 20px;=
+     height: 20px; vertical-align: sub; border-radius: 50%;;" src=3Dhttps://www=
+    .gstatic.com/accountalerts/email/anonymous_profile_photo.png alt=3D""></td>=
+    <td><a style=3D"font-family: &#39;Google Sans&#39;,Roboto,RobotoDraft,Helve=
+    tica,Arial,sans-serif;color: rgba(0,0,0,0.87); font-size: 14px; line-height=
+    : 20px;">examp@example.com</a></td></tr></table></div><div style=3D"font-fa=
+    mily: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 14px; color: rg=
+    ba(0,0,0,0.87); line-height: 20px;padding-top: 20px; text-align: center;">Y=
+    our Google Account was just signed in to from a new Android device. You're =
+    getting this email to make sure it was you.<div style=3D"padding-top: 32px;=
+     text-align: center;"><a href=3Dhttps://accounts.google.com/AccountChooser?=
+    Email=3Dexamp@example.com&amp;continue=3Dhttps://myaccount.google.com/alert=
+    /nt/944%26et%3D0=
+    %26anexp%3Dhsc-control_a--staticndn-control target=3D_blank style=3D"font-f=
+    amily: &#39;Google Sans&#39;,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;=
+     line-height: 16px; color: #ffffff; font-weight: 400; text-decoration: none=
+    ;font-size: 14px;display:inline-block;padding: 10px 24px;background-color: =
+    #4184F3; border-radius: 5px; min-width: 90px;">Check activity</a></div></di=
+    v></div><div style=3D"text-align: left;"><div style=3D"font-family: Roboto-=
+    Regular,Helvetica,Arial,sans-serif;color: rgba(0,0,0,0.54); font-size: 11px=
+    ; line-height: 18px; padding-top: 12px; text-align: center;"><div>You recei=
+    ved this email to let you know about important changes to your Google Accou=
+    nt and services.</div><div style=3D"direction: ltr;">&copy; 2019 Google LLC=
+    , <a class=3Dafal style=3D"font-family: Roboto-Regular,Helvetica,Arial,sans=
+    -serif;color: rgba(0,0,0,0.54); font-size: 11px; line-height: 18px; padding=
+    -top: 12px; text-align: center;">1600 Amphitheatre Parkway, Mountain View, =
+    CA 94043, USA</a></div></div></div></td><td width=3D8 style=3D"width: 8px;"=
+    ></td></tr></table></td></tr><tr height=3D32 style=3D"height: 32px;"><td></=
+    td></tr></table></body></html>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+  
+  
+    "d": {
+      "body": `Hi!!
+
+    Dang it just got super cold out! But don't worry we got your
+    back with some awesome battery powered heated clothing!
+    
+    And we would like to offer you Free Shipping anywhere in the US!!
+    Use Promo Code: #FreeShipUS
+    
+    Check Out Our Most Popular Items:
+    
+    Battery Powered Heated Insoles
+    Control the heat on your feet with a remote control!!
+    
+    Shop Heated Insoles=20
+    ( https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDY2NDgyNSIsImRlbGl2ZXJ5X2=
+    lkIjoiODk1MzYzNTIxNSIsInVybCI6Imh0dHBzOi8vYW5zZXJpcy5jb20vcHJvZHVjdHMvYW5zZ=
+    XJpcy10b3JjaC1lbGVjdHJlay1oZWF0ZWQtaW5zb2xlcz9fX3M9NmJ )
+     The Torch Coat Heater
+    A battery powered heater you can put in any jacket!!
+    
+    Shop Torch Coat Heater=20
+    ( https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDY2NDgyNSIsImRlbGl2ZXJ5X2=
+    lkIjoiODk1MzYzNTIxNSIsInVybCI6Imh0dHBzOi8vYW5zZXJpcy5jb20vcHJvZHVjdHMvdG9yY=
+    ) We look forward
+    to keeping you warm!!
+    
+    Cheers,
+    The Team at Anseris Heated Clothing
+    Denver, CO
+    
+    To make sure you keep getting these emails, please
+    add support@anseris.com to your address book or whitelist us. Want out
+    of the loop? https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDY2NDgyNSIsImR=
+    lbGl2ZXJ5X2lkIjoiODk1MzYzNTIxNSIsInVybCI6Imh0dHBzOi8vd3d3LmdldGRyaXAuY29tL3=
+    N1YnNjcmliZXJzLzZiaTlzOGJweXVvNHBjN2ZyaWNpL3N1YnNjcmlwdGlvbnM_ZD1zdWpscGg4b=
+    TdqZm9pbnRvNDU4MVx1MDAyNmV4Y2x1ZGVfY2xpY2s9MVx1MDAyNmludGVudD11bnN1YnNjcmli=
+    ZVx.
+    
+    1800 Wazee St, Denver, CO 80202, United States`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+  
+  
+    "e": {
+      "body": `<body style=3D"background-color: #ffffff; -webkit-text-size-=
+    adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;" bgcolor=
+    =3D"#ffffff"><span style=3D"display: none !important; mso-hide: all; visibi=
+    lity: hidden; opacity: 0;">And Get Free Shipping!!!</span><div style=3D"bac=
+    kground-color: #ffffff;"><table align=3D"center" border=3D"0" cellpadding=
+    =3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background-color: #=
+    fafafa; width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-=
+    table-rspace: 0pt;" bgcolor=3D"#fafafa"><tbody><tr><td style=3D"border-coll=
+    apse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><!--[if mso =
+    | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+    "0" class=3D"" style=3D"width:600px;" width=3D"600" ><tr><td style=3D"line-=
+    height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div st=
+    yle=3D"max-width: 600px; margin: 0px auto;"><table align=3D"center" border=
+    =3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"w=
+    idth: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rsp=
+    ace: 0pt;"><tbody><tr><td style=3D"direction: ltr; font-size: 0px; text-ali=
+    gn: center; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rsp=
+    ace: 0pt; padding: 10px 0px;" align=3D"center"><!--[if mso | IE]><table rol=
+    e=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td=
+     class=3D"" width=3D"600px" ><table align=3D"center" border=3D"0" cellpaddi=
+    ng=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" =
+    ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+    y;"><![endif]--><div style=3D"max-width: 600px; margin: 0px auto;"><table a=
+    lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+    esentation" style=3D"width: 100%; border-collapse: collapse; mso-table-lspa=
+    ce: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"direction: ltr; fo=
+    nt-size: 0px; text-align: center; border-collapse: collapse; mso-table-lspa=
+    ce: 0pt; mso-table-rspace: 0pt; padding: 0;" align=3D"center"><!--[if mso |=
+     IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacin=
+    g=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;width:600px;" ><![en=
+    dif]--><div class=3D"mj-column-per-100 outlook-group-fix" style=3D"font-siz=
+    e: 0px; text-align: left; direction: ltr; display: inline-block; vertical-a=
+    lign: top; width: 100%;" align=3D"left"><table border=3D"0" cellpadding=3D"=
+    0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"border-c=
+    ollapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><t=
+    r><td style=3D"vertical-align: top; border-collapse: collapse; mso-table-ls=
+    pace: 0pt; mso-table-rspace: 0pt; padding: 0 6px;" valign=3D"top"><table bo=
+    rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+    =3D"100%" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-ta=
+    ble-rspace: 0pt;"><tr><td align=3D"left" style=3D"font-size: 0px; word-brea=
+    k: break-word; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+    rspace: 0pt; padding: 6px 0;"><div style=3D"font-family: Arial, Helvetica, =
+    sans-serif; font-size: 16px; line-height: 1.2; text-align: left; color: #17=
+    1717;" align=3D"left"><p style=3D"display: block; font-family: arial,helvet=
+    ica,sans-serif; font-size: 14px; color: #6c6c6c; margin: 0;"><span style=3D=
+    "font-size: 18px;"><span style=3D"font-weight: bold;">Hi</span></span><span=
+     style=3D"font-size: 22px;"><span style=3D"font-weight: bold;">=C2=A0=
+    !!</span></span><br><br><span style=3D"font-size: 18px;"><span style=3D"fon=
+    t-weight: bold;">Dang it just got super cold out!=C2=A0 But don't worry we =
+    got your back with some awesome battery powered heated clothing!<br><br>And=
+     we would like to=C2=A0offer you Free Shipping anywhere in the US!!<br>Use =
+    Promo Code: #FreeShipUS</span></span></p></div></td></tr></table></td></tr>=
+    </tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td>=
+    </tr></tbody></table></div><!--[if mso | IE]></td></tr></table></td></tr></=
+    table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></=
+    tr></table><![endif]--></td></tr></tbody></table><!--[if mso | IE]><table a=
+    lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D""=
+     style=3D"width:600px;" width=3D"600" ><tr><td style=3D"line-height:0px;fon=
+    t-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D"backgro=
+    und-color: #ffffff; max-width: 600px; margin: 0px auto;"><table align=3D"ce=
+    nter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+    " style=3D"background-color: #ffffff; width: 100%; border-collapse: collaps=
+    e; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor=3D"#ffffff"><tbod=
+    y><tr><td style=3D"direction: ltr; font-size: 0px; text-align: center; bord=
+    er-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; paddin=
+    g: 18px 0px;" align=3D"center"><!--[if mso | IE]><table role=3D"presentatio=
+    n" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" widt=
+    h=3D"600px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+    cing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" ><tr><td style=
+    =3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-=
+    -><div style=3D"max-width: 600px; margin: 0px auto;"><table align=3D"center=
+    " border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" st=
+    yle=3D"width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-t=
+    able-rspace: 0pt;"><tbody><tr><td style=3D"direction: ltr; font-size: 0px; =
+    text-align: center; border-collapse: collapse; mso-table-lspace: 0pt; mso-t=
+    able-rspace: 0pt; padding: 0;" align=3D"center"><!--[if mso | IE]><table ro=
+    le=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><t=
+    d class=3D"" style=3D"vertical-align:top;width:600px;" ><![endif]--><div cl=
+    ass=3D"mj-column-per-100 outlook-group-fix" style=3D"font-size: 0px; text-a=
+    lign: left; direction: ltr; display: inline-block; vertical-align: top; wid=
+    th: 100%;" align=3D"left"><table border=3D"0" cellpadding=3D"0" cellspacing=
+    =3D"0" role=3D"presentation" width=3D"100%" style=3D"border-collapse: colla=
+    pse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D=
+    "vertical-align: top; border-collapse: collapse; mso-table-lspace: 0pt; mso=
+    -table-rspace: 0pt; padding: 0 6px;" valign=3D"top"><table border=3D"0" cel=
+    lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=
+    =3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+    ;"><tr><td align=3D"left" style=3D"font-size: 0px; word-break: break-word; =
+    border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; pa=
+    dding: 24px 0;"><div style=3D"font-family: Arial, Helvetica, sans-serif; fo=
+    nt-size: 16px; line-height: 1.2; text-align: left; color: #171717;" align=
+    =3D"left"><p style=3D"display: block; font-family: arial,helvetica,sans-ser=
+    if; font-size: 14px; color: #6c6c6c; margin: 0;"><br><span style=3D"font-si=
+    ze: 22px;"><span style=3D"font-weight: bold;">Check Out Our Most Popular It=
+    ems:</span></span></p></div></td></tr><tr><td style=3D"font-size: 0px; word=
+    -break: break-word; border-collapse: collapse; mso-table-lspace: 0pt; mso-t=
+    able-rspace: 0pt;"><!--[if mso | IE]><table role=3D"presentation" border=3D=
+    "0" cellpadding=3D"0" cellspacing=3D"0"><tr><td height=3D"20" style=3D"vert=
+    ical-align:top;height:20px;"><![endif]--><div style=3D"height: 20px;">=C2=
+    =A0</div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr><tr><td =
+    align=3D"center" style=3D"font-size: 0px; word-break: break-word; border-co=
+    llapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0p=
+    x 13%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+    sentation" style=3D"border-collapse: collapse; border-spacing: 0px; mso-tab=
+    le-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"width: 562p=
+    x; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+    "><a href=3D"https://t.dripemail2.com/c/eyJhY2NvdW50X2lkIjoiNDY2NDgyNSIsImR=
+    lbGl2ZXJ5X2lkIjoiODk1MzYzNTIxNSIsInVybCI6Imh0dHBzOi8vYW5zZXJpcy5jb20vcHJvZH=
+    VjdHMvYW5zZXJpcy10b3JjaC1lbGVjdHJlay1oZWF0ZWQtaW5zb2xlcz9f=
+    " target=3D"_blank" style=3D"color: #1A8DC6; text-decorati=
+    on: none;"><img alt=3D"" height=3D"auto" src=3D"https://getdrip.s3.amazonaw=
+    s.com/uploads/image_upload/image/681603/embeddable_530c5e6c-4846-415c-87df-=
+    b1b5fd77ac5a.jpg" style=3D"display: block; outline: none; text-decoration: =
+    none; height: auto; width: 100%; font-size: 16px; line-height: 100%; -ms-in=
+    terpolation-mode: bicubic; border: 0;" width=3D"562"></a></td></tr></tbody>=
+    </table></td></tr><tr><td align=3D"left" style=3D"font-size: 0px; word-brea=
+    k: break-word; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+    rspace: 0pt; padding: 6px 0;"><div style=3D"font-family: Arial, Helvetica, =
+    sans-serif; font-size: 16px; line-height: 1.2; text-align: left; color: #17=
+    1717;" align=3D"left"><p style=3D"display: block; font-family: arial,helvet=
+    ica,sans-serif; font-size: 14px; color: #6c6c6c; margin: 0;"><span style=3D=
+    "font-weight: bold;">Battery Powered Heated Insoles</span><br>Control the h=
+    eat on your feet with a remote control!!</p></div></td></tr><tr><td align=
+    =3D"center" vertical-align=3D"middle" style=3D"font-size: 0px; word-break: =
+    break-word; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rsp=
+    ace: 0pt; padding: 6px 0px;"><table border=3D"0" cellpadding=3D"0" cellspac=
+    ing=3D"0" role=3D"presentation" style=3D"border-collapse: separate; width: =
+    50%; line-height: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr>=
+    <td align=3D"center" bgcolor=3D"#f7941d" role=3D"presentation" style=3D"bor=
+    der-radius: 3px; cursor: auto; mso-padding-alt: 12px 24px; background-color=
+    : #f7941d; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspa=
+    ce: 0pt; border: none;" valign=3D"middle"><a href=3D"https://t.dripemail2.c=
+    om/c/eyJhY2NvdW50X2lkIjoiNDY2NDgyNSIsImRlbGl2ZXJ5X2lkIjoiODk1MzYzNTIxNSIsIn=
+    VybCI6Imh0dHBzOi8vYW5zZXJpcy5jb20vcHJvZHVjdHMvYW5zZXJpcy10b3JjaC1lbGVjdHJla=
+    y" style=3D"display=
+    : inline-block; background-color: #f7941d; color: #ffffff; font-family: Ari=
+    al; font-size: 14px; font-weight: normal; line-height: 1.2; text-decoration=
+    : none; text-transform: none; mso-padding-alt: 0px; border-radius: 3px; mar=
+    gin: 0; padding: 12px 24px;" target=3D"_blank"><span style=3D"font-size: 22=
+    px;"><span style=3D"font-weight: bold;">Shop Heated Insoles</span></span></=
+    a></td></tr></table></td></tr><tr><td style=3D"font-size: 0px; word-break: =
+    break-word; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rsp=
+    ace: 0pt;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cell=
+    padding=3D"0" cellspacing=3D"0"><tr><td height=3D"20" style=3D"vertical-ali=
+    gn:top;height:20px;"><![endif]--><div style=3D"height: 20px;">=C2=A0</div><=
+    !--[if mso | IE]></td></tr></table><![endif]--></td></tr><tr><td style=3D"f=
+    ont-size: 0px; word-break: break-word; border-collapse: collapse; mso-table=
+    -lspace: 0pt; mso-table-rspace: 0pt;"><!--[if mso | IE]><table role=3D"pres=
+    entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td height=
+    =3D"29" style=3D"vertical-align:top;height:29px;"><![endif]--><div style=3D=
+    "height: 29px;">=C2=A0</div><!--[if mso | IE]></td></tr></table><![endif]--=
+    ></td></tr><tr><td align=3D"center" style=3D"font-size: 0px; word-break: br=
+    eak-word; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+    e: 0pt; padding: 0px 9%;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+    =3D"0" role=3D"presentation" style=3D"border-collapse: collapse; border-spa=
+    cing: 0px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td st=
+    yle=3D"width: 570px; border-collapse: collapse; mso-table-lspace: 0pt; mso-=
+    table-rspace: 0pt;"><a href=3D"https://t.dripemail2.com/c/eyJhY2NvdW50X2lkI=
+    joiNDY2NDgyNSIsImRlbGl2ZXJ5X2lkIjoiODk1MzYzNTIxNSIsInVybCI6Imh0dHBzOi8vYW5z=
+    ZXJpcy5jb20vcHJvZHVjdHMvdG9yY2gtY2Z=
+    yaWNpIn0" target=3D"_blank" style=3D"color: #1A8DC6; text-decoration: none;=
+    "><img alt=3D"" height=3D"auto" src=3D"https://getdrip.s3.amazonaws.com/upl=
+    oads/image_upload/image/681587/embeddable_98ff02f1-5d9a-403c-99dc-5f8a65611=
+    9ab.jpg" style=3D"display: block; outline: none; text-decoration: none; hei=
+    ght: auto; width: 100%; font-size: 16px; line-height: 100%; -ms-interpolati=
+    on-mode: bicubic; border: 0;" width=3D"570"></a></td></tr></tbody></table><=
+    /td></tr><tr><td align=3D"left" style=3D"font-size: 0px; word-break: break-=
+    word; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0=
+    pt; padding: 6px 0;"><div style=3D"font-family: Arial, Helvetica, sans-seri=
+    f; font-size: 16px; line-height: 1.2; text-align: left; color: #171717;" al=
+    ign=3D"left"><p style=3D"display: block; font-family: arial,helvetica,sans-=
+    serif; font-size: 14px; color: #6c6c6c; margin: 0;"><span style=3D"font-wei=
+    ght: bold;">The Torch Coat Heater</span><br>A battery powered heater you ca=
+    n put in any jacket!!</p></div></td></tr><tr><td align=3D"center" vertical-=
+    align=3D"middle" style=3D"font-size: 0px; word-break: break-word; border-co=
+    llapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 6p=
+    x 0px;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+    sentation" style=3D"border-collapse: separate; width: 50%; line-height: 100=
+    %; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tr><td align=3D"center" =
+    bgcolor=3D"#f7941d" role=3D"presentation" style=3D"border-radius: 3px; curs=
+    or: auto; mso-padding-alt: 12px 24px; background-color: #f7941d; border-col=
+    lapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: none=
+    ;" valign=3D"middle"><a href=3D"https://t.dripemail2.com/c/eyJhY2NvdW50X2lk=
+    IjoiNDY2NDgyNSIsImRlbGl2ZXJ5X2lkIjoiODk1MzYzNTIxNSIsInVybCI6Imh0dHBzOi8vYW5=
+    zZXJpcy5jb20vcHJvZ=
+    ZyaWNpIn0" style=3D"display: inline-block; background-color: #f7941d; color=
+    : #ffffff; font-family: Arial; font-size: 14px; font-weight: normal; line-h=
+    eight: 1.2; text-decoration: none; text-transform: none; mso-padding-alt: 0=
+    px; border-radius: 3px; margin: 0; padding: 12px 24px;" target=3D"_blank"><=
+    span style=3D"font-size: 22px;"><span style=3D"font-weight: bold;">Shop Tor=
+    ch Coat Heater</span></span></a></td></tr></table></td></tr><tr><td style=
+    =3D"font-size: 0px; word-break: break-word; border-collapse: collapse; mso-=
+    table-lspace: 0pt; mso-table-rspace: 0pt;"><!--[if mso | IE]><table role=3D=
+    "presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td hei=
+    ght=3D"29" style=3D"vertical-align:top;height:29px;"><![endif]--><div style=
+    =3D"height: 29px;">=C2=A0</div><!--[if mso | IE]></td></tr></table><![endif=
+    ]--></td></tr><tr><td align=3D"left" style=3D"font-size: 0px; word-break: b=
+    reak-word; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspa=
+    ce: 0pt; padding: 25px 0;"><div style=3D"font-family: Arial, Helvetica, san=
+    s-serif; font-size: 16px; line-height: 1.2; text-align: left; color: #17171=
+    7;" align=3D"left"><p style=3D"display: block; font-family: arial,helvetica=
+    ,sans-serif; font-size: 14px; color: #6c6c6c; margin: 0;"><span style=3D"fo=
+    nt-size: 18px;">We look forward to keeping you warm!!<br><br>Cheers,<br>The=
+     Team at Anseris Heated Clothing<br>Denver, CO</span></p></div></td></tr></=
+    table></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><=
+    ![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></ta=
+    ble></td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if m=
+    so | IE]></td></tr></table><![endif]--><table align=3D"center" border=3D"0"=
+     cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"backgro=
+    und-color: #f7f7f7; width: 100%; border-collapse: collapse; mso-table-lspac=
+    e: 0pt; mso-table-rspace: 0pt;" bgcolor=3D"#f7f7f7"><tbody><tr><td style=3D=
+    "border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">=
+    <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+    llspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" ><tr><td st=
+    yle=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endi=
+    f]--><div style=3D"max-width: 600px; margin: 0px auto;"><table align=3D"cen=
+    ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation"=
+     style=3D"width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; ms=
+    o-table-rspace: 0pt;"><tbody><tr><td style=3D"direction: ltr; font-size: 0p=
+    x; text-align: center; border-collapse: collapse; mso-table-lspace: 0pt; ms=
+    o-table-rspace: 0pt; padding: 2px 100px;" align=3D"center"><!--[if mso | IE=
+    ]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+    =3D"0"><tr><td class=3D"" width=3D"600px" ><table align=3D"center" border=
+    =3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:400px;=
+    " width=3D"400" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-he=
+    ight-rule:exactly;"><![endif]--><div style=3D"max-width: 400px; margin: 0px=
+     auto;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+    =3D"0" role=3D"presentation" style=3D"width: 100%; border-collapse: collaps=
+    e; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"><tbody><tr><td style=3D"d=
+    irection: ltr; font-size: 0px; text-align: center; border-collapse: collaps=
+    e; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0;" align=3D"cent=
+    er"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=
+    =3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;wid=
+    th:400px;" ><![endif]--><div class=3D"mj-column-per-100 outlook-group-fix" =
+    style=3D"font-size: 0px; text-align: left; direction: ltr; display: inline-=
+    block; vertical-align: top; width: 100%;" align=3D"left"><table border=3D"0=
+    " cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" =
+    style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace=
+    : 0pt;"><tbody><tr><td style=3D"vertical-align: top; border-collapse: colla=
+    pse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0 10px;" valign=
+    =3D"top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+    esentation" width=3D"100%" style=3D"border-collapse: collapse; mso-table-ls=
+    pace: 0pt; mso-table-rspace: 0pt;"><tr><td align=3D"left" style=3D"font-siz=
+    e: 0px; word-break: break-word; border-collapse: collapse; mso-table-lspace=
+    : 0pt; mso-table-rspace: 0pt; padding: 12px 0;"><div style=3D"font-family: =
+    Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.2; text-align=
+    : left; color: #171717;" align=3D"left"><p style=3D"text-align: center; dis=
+    play: block; font-family: arial,helvetica,sans-serif; font-size: 14px; colo=
+    r: #6c6c6c; margin: 0;" align=3D"center"><br><span style=3D"color: #808080;=
+    "><span style=3D"line-height: 1;"><span style=3D"font-size: 12px;">To make =
+    sure you keep getting these emails, please add=C2=A0</span></span></span><s=
+    pan style=3D"color: #808080;"><span style=3D"line-height: 1;"><span style=
+    =3D"font-size: 12px;">support@anseris.com to your address book or whitelist=
+     us. Want out of the loop? <a href=3D"https://t.dripemail2.com/c/eyJhY2NvdW=
+    50X2lkIjoiNDY2NDgyNSIsImRlbGl2ZXJ5X2lkIjoiODk1MzYzNTIxNSIsInVybCI6Imh0dHBzO=
+    cmlwdGlvbnM_ZD1zdWpscGg4bTdqZm9pbnRvNDU4MVx1MDAyNmV4Y2x1ZGVfY2xpY2s9MVx1MDA=
+    y" styl=
+    e=3D"color: #1A8DC6; text-decoration: none;">Unsubscribe</a>.<br><br>1800 W=
+    azee St, Denver, CO 80202, United States</span></span></span></p></div></td=
+    ></tr></table></td></tr></tbody></table></div><!--[if mso | IE]></td></tr><=
+    /table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td><=
+    /tr></table></td></tr></table><![endif]--></td></tr></tbody></table></div><=
+    !--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></=
+    div>
+    <img src=3D"http://o.dripemail2.com/wf/open?upn=3D92TQBpXn-2Bh9qpzeHlA9uG7n=
+    hVUUBLm4JGS16NRcq1Eptc7sGL3G1FhoiX0FfFz7xI5m8ArvpWr5LbUWfV-2BwG52vF6rXgexIc=
+    FjpgkCexeLOeCItOIBZizgxcZSWlhQDRtkGjteCmqSD5CIKjGZ-2FAEA5IHPYpKA9xO283nX-2B=
+    hEZbjv7nDobR7NbAoDP2OwWlH2bNpu7TF0sstUotAWXNjeJ-2BJkw4pqezgLBByZQXmcb" alt=
+    =3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;=
+    width:1px !important;border-width:0 !important;margin-top:0 !important;marg=
+    in-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;p=
+    adding-top:0 !important;padding-bottom:0 !important;padding-right:0 !import=
+    ant;padding-left:0 !important;"/>
+    </body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+  
+  
+    "f": {
+      "body": `Twitter
+
+    We noticed a recent login for your account.
+    Device: Chrome on Windows
+    Location: Scranton, PA
+    *Location is approximate based on the login's IP address.
+    If this was you
+    Great! There's nothing else you need to do.
+    
+    If this wasn=E2=80=99t you
+    Your account may have been compromised and you should take a few steps to m=
+    ake sure your account is secure.
+    To start, reset your password now.
+    > https://twitter.com/account/confirm_email_reset?reset_type=3De&password_r=
+    eset_cause=3Dlogin_notification&token_version=3D0&c=
+    onfirm_pending_email=3D0`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+  
+  
+    "g": {
+      "body": `<body bgcolor=3D"#ffffff" style=3D"margin:0;padding:0;-webkit-text-size-adj=
+    ust:100%;-ms-text-size-adjust:100%;">
+    <style type=3D"text/css">
+    .addressLink a { color: #8899A6 !important; text-decoration: none !importan=
+    t; }
+    </style>
+    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" clas=
+    s=3D"body_wrapper" bgcolor=3D"#F5F8FA" style=3D"padding:0;margin:0;line-hei=
+    ght:1px;font-size:1px;">
+    <tbody>
+    <tr>
+    <td align=3D"center" style=3D"padding:0;margin:0;line-height:1px;font-size:=
+    1px;">
+    <table class=3D"collapse" id=3D"header" align=3D"center" width=3D"448" styl=
+    e=3D"width: 448px;padding:0;margin:0;line-height:1px;font-size:1px;" bgcolo=
+    r=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+    <tbody>
+    <tr>
+    <td style=3D"min-width: 448px;padding:0;margin:0;line-height:1px;font-size:=
+    1px;" class=3D"cut"> <img src=3D"https://ea.twimg.com/email/self_serve/medi=
+    a/spacer-1402696023930.png" style=3D"min-width: 448px;height:1px;margin:0;p=
+    adding:0;display:block;-ms-interpolation-mode:bicubic;border:none;outline:n=
+    one;" /> </td>
     </tr>
-                              </table>
-                             =20
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style=3D" background-color: #00a581; text-ali=
-    gn: center;">
-                                <p style=3D"color: #ffffff; font-weight:bold; m=
-    argin: 0px; padding: 0px; padding-top: 30px;"><a href=3D"http://ojb599881y1=
-    28m.w2aa-e127.dqgh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/go" style=3D"color: #fff=
-    fff; font-size:65px; line-height: 70px; font-weight:bold;text-decoration: n=
-    one;font-family: Arial, Helvetica, sans-serif;">A Safer Home</a>
-                                </p>
-                                <p style=3D"color: #ffffff; font-weight:bold;  =
-    margin: 0px; padding: 15px;"><a href=3D"http://ojb599881y128m.w2aa-e127.dqg=
-    h5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/go" style=3D"color: #ffffff; font-size:65=
-    px; line-height: 70px; font-weight:bold;text-decoration: none;font-family: =
-    Arial, Helvetica, sans-serif;">Starts with <span>Viv</span>int</a>
-                                </p>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href=3D"http://ojb599881y128m.w2aa-e127.dq=
-    gh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/go"><img alt=3D"" src=3D"http://ojb59988=
-    1y128m.w2aa-e127.dqgh5ljj.ml/img-cYzsUAALLAAABWu9wUHsghiw/vvtpmain.jpg" wid=
-    th=3D"620" height=3D"104" style=3D"border: none;display: block;" /></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <div height=3D"376" style=3D"width: 620px; heig=
-    ht:376px; max-height: 376px; max-width: 620px; background-image: url('http:=
-    //ojb599881y128m.w2aa-e127.dqgh5ljj.ml//img-cYzsUAALLAAABWu9wUHsghiw/vvtmai=
-    ng.jpg');  background-color: #cdeff6; border: none;" width=3D"620">
-                                  <table border=3D"0" cellpadding=3D"0" cellspa=
-    cing=3D"0" style=3D"width: 620px;" width=3D"620">
-                                    <tbody>
-                                      <tr>
-                                        <td style=3D"width: 44%;">&nbsp;
-                                        </td>
-                                        <td>
-                                          <table border=3D"0" cellpadding=3D"0"=
-     cellspacing=3D"0" style=3D"padding-top:6px;">
-                                            <tbody>
-                                              <tr>
-                                                <td style=3D"padding-top:10px;"=
-    ><img alt=3D"" src=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/img-cYzsU=
-    AALLAAABWu9wUHsghiw/p.png" width=3D"24" height=3D"24" />
-                                                </td>
-                                                <td style=3D"font-size:20px; li=
-    ne-height: 20px; font-weight:bold; padding: 15px;"><span>$0</span> <span>Ac=
-    t</span>ivation Fee
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td style=3D"padding-top:10px;"=
-    ><img alt=3D"" src=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/img-cYzsU=
-    AALLAAABWu9wUHsghiw/p.png" width=3D"24" height=3D"24" />
-                                                </td>
-                                                <td style=3D"font-size:20px; li=
-    ne-height: 20px; font-weight:bold; padding: 15px;">Month to Month Pricing A=
-    vailable*
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td style=3D"padding-top:10px;"=
-    ><img alt=3D"" src=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/img-cYzsU=
-    AALLAAABWu9wUHsghiw/p.png" width=3D"24" height=3D"24" />
-                                                </td>
-                                                <td style=3D"font-size:20px; li=
-    ne-height: 20px; font-weight:bold; padding: 15px;">You May Save on <span>Ho=
-    me</span>owners Insurance
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td style=3D"padding-top:10px;"=
-    ><img alt=3D"" src=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/img-cYzsU=
-    AALLAAABWu9wUHsghiw/p.png" width=3D"24" height=3D"24" />
-                                                </td>
-                                                <td style=3D"font-size:20px; li=
-    ne-height: 20px; font-weight:bold; padding: 15px;">FR<span>EE Install</span=
-    >ation*
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td colspan=3D"2" style=3D"padd=
-    ing-top:10px;"><a href=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/cYzsU=
-    AALLAAABWu9wUHsghiw/go" style=3D"display: inline-block; text-decoration: no=
-    ne; background-color: #ef7f30; color: #ffffff;text-align: center;  font-siz=
-    e: 22px;line-height: 22px;padding: 15px 50px;font-weight: bold;font-family:=
-     Arial, Helvetica, sans-serif;">=F0=9D=97=9A=F0=9D=97=B2=F0=9D=98=81 =F0=9D=
-    =97=AE =F0=9D=97=99=F0=9D=97=A5=F0=9D=97=98=F0=9D=97=98 =F0=9D=97=A4=F0=9D=
-    =98=82=F0=9D=97=BC=F0=9D=98=81=F0=9D=97=B2</a>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><a href=3D"http://ojb599881y128m.w2aa-e127.dq=
-    gh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/go"><img alt=3D"" src=3D"http://ojb59988=
-    1y128m.w2aa-e127.dqgh5ljj.ml/img-cYzsUAALLAAABWu9wUHsghiw/texno2.jpg" width=
-    =3D"620" height=3D"207" style=3D"display:block;" /></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <table align=3D"center" bgcolor=3D"#ffffff" bor=
-    der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 538px;" w=
-    idth=3D"100%">
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                       =20
-                                       =20
-                                       =20
-                                       =20
-                                                               <table cellspaci=
-    ng=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
-                                <tr align=3D"justify">
-                                    <td style=3D"padding: 20px 20px 5px 20px; t=
-    ext-align: justify; font-family: sans-serif; font-size: 10px; mso-height-ru=
-    le: exactly; line-height: 15px; color: #888888;">
-    *Offer Details
-    <br>
-    
-    Qualifying system purchase requires minimum <span>$</span>599.99 equipment =
-    purchase and applicable services agreement. Click <a href=3D"http://ojb5998=
-    81y128m.w2aa-e127.dqgh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/go" style=3D"color: =
-    #888888;" target=3D"blank">here</a> for monthly service plan prices. Equipm=
-    ent purchase may be financed subject to an agreement with one of <span>Viv<=
-    /span><span style=3D"">int</span>=E2=80=99s financing partners. Offer not a=
-    vailable in all states or provinces. Monthly <span>$</span>1.48 cellular ne=
-    twork maintenance fee applies. Taxes and local permit fees may apply. New <=
-    span>Viv</span><span style=3D"">int</span> Customers only.
-    
-    <br>
-    <br>=20
-    
-    Financing Options Available
-    <br>
-    
-    Financing eligibility and terms subject to credit approval. Financing optio=
-    ns require a service agreement coterminous with applicable financing agreem=
-    ent. Month-to-month service agreement available when equipment is purchased=
-     upfront. Additional equipment may be purchased and financed.
-    <br>
-    <br>
-    
-    <span>Viv</span><span style=3D"">int</span> Systems &amp; Services
-    <br>
-    
-    System supports up to six cameras subject to sufficient WiFi speeds. Withou=
-    t a <span>Viv</span><span style=3D"">int</span> services plan, product and =
-    system functionality is limited (including loss of remote connectivity). Sp=
-    eak to a <span>Viv</span><span style=3D"">int</span> representative at the =
-    phone number in this offer for complete equipment, services, and package de=
-    tails, including pricing and financing details. Products and services in Lo=
-    uisiana provided by <span>Viv</span><span style=3D"">int</span> Louisiana C=
-    ommercial Certificate #58280. See <span>Viv</span><span style=3D"">int</spa=
-    n> license numbers <a href=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/c=
-    YzsUAALLAAABWu9wUHsghiw/lcs" style=3D"color: #888888;" target=3D"blank">her=
-    e</a>.<br>
-                          =20
-    <br><br>
-                                    </td>
-     </tr>
-     </table>
-                                       =20
-                                       =20
-                                       =20
-                                       =20
-                              =20
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                                <table align=3D"center" bgcolor=3D"#ffffff" bor=
-    der=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width: 600px;" w=
-    idth=3D"100%">
-                                  <tbody>
-                                    <tr>
-                                      <td style=3D"padding:0px 10px 10px 10px; =
-    width: 100%;font-size: 12px; font-family: sans-serif; mso-height-rule: exac=
-    tly; line-height:18px; text-align: center; color: #888888;">---------------=
-    ----------------------
-                                        <br />=F0=9D=98=8B=F0=9D=98=B0=F0=9D=98=
-    =AF&#39;=F0=9D=98=B5 =F0=9D=98=B8=F0=9D=98=A2=F0=9D=98=AF=F0=9D=98=B5 =F0=
-    =9D=98=B5=F0=9D=98=B0 =F0=9D=98=B3=F0=9D=98=A6=F0=9D=98=A4=F0=9D=98=A6=F0=
-    =9D=98=AA=F0=9D=98=B7=F0=9D=98=A6 =F0=9D=98=A6=F0=9D=98=AE=F0=9D=98=A2=F0=
-    =9D=98=AA=F0=9D=98=AD =F0=9D=98=B6=F0=9D=98=B1=F0=9D=98=A5=F0=9D=98=A2=F0=
-    =9D=98=B5=F0=9D=98=A6=F0=9D=98=B4? <a href=3D"http://ojb599881y128m.w2aa-e1=
-    27.dqgh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/unsub" style=3D"text-decoration: un=
-    derline; color: #888888">=F0=9D=98=9C=F0=9D=98=AF=F0=9D=98=B4=F0=9D=98=B6=
-    =F0=9D=98=A3=F0=9D=98=B4=F0=9D=98=A4=F0=9D=98=B3=F0=9D=98=AA=F0=9D=98=A3=F0=
-    =9D=98=A6 =F0=9D=98=A9=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=A6</a>.
-                                        <br />=F0=9D=98=9E=F0=9D=98=A6 =F0=9D=
-    =98=B3=F0=9D=98=A6=F0=9D=98=B4=F0=9D=98=B1=F0=9D=98=A6=F0=9D=98=A4=F0=9D=98=
-    =B5 =F0=9D=98=BA=F0=9D=98=B0=F0=9D=98=B6=F0=9D=98=B3 =F0=9D=98=B3=F0=9D=98=
-    =AA=F0=9D=98=A8=F0=9D=98=A9=F0=9D=98=B5 =F0=9D=98=B5=F0=9D=98=B0 =F0=9D=98=
-    =B1=F0=9D=98=B3=F0=9D=98=AA=F0=9D=98=B7=F0=9D=98=A2=F0=9D=98=A4=F0=9D=98=BA=
-     - <a href=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/cYzsUAALLAAABWu9w=
-    UHsghiw/plc" style=3D"color: #888888; text-decoration: underline;" target=
-    =3D"blank">=F0=9D=98=9D=F0=9D=98=AA=F0=9D=98=A6=F0=9D=98=B8 =F0=9D=98=B0=F0=
-    =9D=98=B6=F0=9D=98=B3 =F0=9D=98=B1=F0=9D=98=B0=F0=9D=98=AD=F0=9D=98=AA=F0=
-    =9D=98=A4=F0=9D=98=BA</a>
-                                        <br />4931 =F0=9D=98=95 300 =F0=9D=98=
-    =9E, =F0=9D=98=97=F0=9D=98=B3=F0=9D=98=B0=F0=9D=98=B7=F0=9D=98=B0, =F0=9D=
-    =98=9C=F0=9D=98=9B 84604
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p><img height=3D"1" src=3D"http://ojb5=
-    99881y128m.w2aa-e127.dqgh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/t.gif" style=3D"w=
-    idth:1px;height:1px;" width=3D"1" />&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p>
-                                        <p>&nbsp;
-                                        </p><img height=3D"1" src=3D"http://ojb=
-    599881y128m.w2aa-e127.dqgh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/t.gif" style=3D"=
-    width:1px;height:1px;" width=3D"1" />
-                                        <p style=3D"text-align:center;"><a href=
-    =3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/cYzsUAALLAAABWu9wUHsghiw/pr=
-    ef"><img alt=3D"" src=3D"http://ojb599881y128m.w2aa-e127.dqgh5ljj.ml/img-cY=
-    zsUAALLAAABWu9wUHsghiw/rmvaddr.gif" width=3D"314" height=3D"26" /></a>
-                                        </p>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table></center>
-      </div>`,
-  
-  
-    `<body style=3D"margin: 0pt; padding: 0pt;"><center>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
-    ing=3D"0" id=3D"wrapper" style=3D"margin: 0pt; padding: 0pt;" width=3D"100%=
-    ">
-                  <tbody>
-                    <tr valign=3D"top">
-                      <td align=3D"center">
-                        <table bgcolor=3D"#FFFFFF" border=3D"0" cellpadding=3D"=
-    0" cellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspace: =
-    0px; mso-table-rspace: 0px;" width=3D"100%">
-                          <tbody>
-                            <tr>
-                              <td align=3D"center" style=3D"border-collapse: co=
-    llapse; mso-line-height-rule: exactly;">
-                                <table borde=3D"0" cellspacing=3D"0" style=3D"b=
-    ackground-color:#000;" width=3D"625">
-                                  <tbody>
-                                    <tr>
-                                      <td style=3D"background-color:#000;width:=
-    80%;" valign=3D"middle">
-                                        <p style=3D"padding: 10px 40px 20px 20p=
-    x;margin:0px;"><a href=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAA=
-    AAou9wUiZNkaw/go" style=3D"font-style: italic;font-family:sans-serif;text-d=
-    ecoration:none;font-size:40px;line-height:40px;font-weight:bold;color:#0e8e=
-    44;padding:0px;margin:0px;white-space: nowrap;"><span>TERM</span>INIX</a>
-                                        </p>
-                                      </td>
-                                      <td style=3D"background-color:#000;paddin=
-    g-right:24px;padding-bottom:10px;" valign=3D"middle">
-                                        <p style=3D"padding:10px 0 0 0;margin:0=
-    px;vertical-align:top;"><a href=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2z=
-    zMAAIzsAAAAou9wUiZNkaw/go" style=3D"text-decoration:none;padding:0px;margin=
-    :0px;color:#fff;font-size:28px;line-height:28px;font-weight:bold;white-spac=
-    e: nowrap;vertical-align:top;display:inline-block;">90+ <span style=3D"font=
-    -weight:normal;letter-spacing:1px;">YEARS</span></a>
-                                        </p>
-                                        <table border=3D"0" cellpadding=3D"0" c=
-    ellspacing=3D"0" style=3D"margin:0px;padding:0px;">
-                                          <tbody>
-                                            <tr style=3D"vertical-align:top;">
-                                              <td><a href=3D"http://uzb4fuc39e1=
-    5i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go" style=3D"vertical-align:to=
-    p;display:inline-block;text-decoration:none;padding:0px;margin:0px;color:#f=
-    ff;font-size:22px;line-height:22px;font-weight:normal;white-space: nowrap;f=
-    ont-weight:bold;">EXPERIENCE</a>
-                                              </td>
-                                              <td><a href=3D"http://uzb4fuc39e1=
-    5i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go" style=3D"text-decoration:n=
-    one;padding:0px;margin:0px;"><img alt=3D"" src=3D"http://uzb4fuc39e15i8.w1.=
-    kcpsbyib.ml/img-c2zzMAAIzsAAAAou9wUiZNkaw/trmico.gif" width=3D"23" height=
-    =3D"30" /></a>
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                                <table borde=3D"0" cellspacing=3D"0" style=3D"b=
-    ackground-color:#fff;" width=3D"625">
-                                  <tbody>
-                                    <tr>
-                                      <td align=3D"center">
-                                        <p style=3D"padding:0px;margin:0px;"><a=
-     href=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go"=
-     style=3D"text-decoration:none;padding:0px;margin:0px;color:#000;font-weigh=
-    t:900;font-size: 76px;line-height: 76px;white-space: nowrap;letter-spacing:=
-    0px;font-family:'Arial Black', Arial, sans-serif;">GUARANTEED</a> <a href=
-    =3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go" styl=
-    e=3D"text-decoration:none;padding:0px;margin:0px;color:#000;font-weight:900=
-    ;font-size: 68px;line-height: 68px;white-space: nowrap;letter-spacing:0px;f=
-    ont-family:'Arial Black', Arial, sans-serif;">PEST CONTROL</a>
-                                        </p>
-                                        <p style=3D"padding:4px 0 0 0;margin:0p=
-    x;font-weight:normal;line-height:28px;font-size:28px;color:#000;text-align:=
-    center;">We&#39;ll do whatever it takes, by&nbsp;coming back between treatm=
-    ents at no cost, until pests are gone.<sup style=3D"font-size:14px;">1</sup=
-    >
-                                        </p>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align=3D"center" style=3D"padding:16p=
-    x 0px;"><center>
-                                        <table cellspacing=3D"0" style=3D"width=
-    :70%;border: 4px solid #b2b3b5;background-color:#fff;padding:8px;">
-                                          <tbody>
-                                            <tr>
-                                              <td align=3D"center" style=3D"bac=
-    kground-color: #2c9c46;padding:4px;" valign=3D"middle"><a href=3D"http://uz=
-    b4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go" style=3D"white-sp=
-    ace: nowrap;text-decoration:none;color:#fff;font-size:80px;line-height:80px=
-    ;font-weight:bold;">100%</a>
-                                              </td>
-                                              <td align=3D"center" style=3D"bac=
-    kground-color: #2c9c46;padding:4px 4px 4px 0px;" valign=3D"middle">
-                                                <p style=3D"padding:0px;margin:=
-    0px;"><a href=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZ=
-    Nkaw/go" style=3D"white-space: nowrap;text-decoration:none;color:#fff;font-=
-    size:32px;line-height:32px;font-weight:bold;">SATISFACTION</a>
-                                                </p>
-                                                <p style=3D"padding:0px;margin:=
-    0px;"><a href=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZ=
-    Nkaw/go" style=3D"white-space: nowrap;text-decoration:none;color:#fff;font-=
-    size:40px;line-height:40px;font-weight:bold;">GUARANTEE</a>
-                                                </p>
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table></center>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align=3D"center">
-                                        <p style=3D"padding:0px;margin:0px;"><a=
-     href=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go"=
-     style=3D"text-decoration:none;padding:0px;margin:0px;color:#000;font-weigh=
-    t:900;font-size: 90px;line-height: 90px;white-space: nowrap;font-family:'Ar=
-    ial Black', Arial, sans-serif;">SAVE $50<sup style=3D"vertical-align: super=
-    ; font-size: 36px;margin-top:-10px;">2</sup></a>
-                                        </p>
-                                        <p style=3D"padding:4px 0 0 0;margin:0p=
-    x;font-weight:bold;line-height:28px;font-size:28px;color:#000;white-space: =
-    nowrap;">ON A <span>TERM</span>INIX PEST CONTROL PLAN<sup style=3D"vertical=
-    -align: super; font-size: 18px;">3</sup>
-                                        </p>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align=3D"center">
-                                        <p style=3D"font-size:24px;color:#02020=
-    2;text-align:left;padding:10px 0 0 0;margin:0px;width:80%;"><img alt=3D"" s=
-    rc=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/img-c2zzMAAIzsAAAAou9wUiZNkaw/tc=
-    hech.gif" width=3D"17" height=3D"17" />100% Satisfaction guarantee
-                                        </p>
-                                        <p style=3D"font-size:24px;color:#02020=
-    2;text-align:left;padding:0px;margin:0px;width:80%;"><img alt=3D"" src=3D"h=
-    ttp://uzb4fuc39e15i8.w1.kcpsbyib.ml/img-c2zzMAAIzsAAAAou9wUiZNkaw/tchech.gi=
-    f" width=3D"17" height=3D"17" />America&#39;s leading provider in termite a=
-    nd pest control services
-                                        </p>
-                                        <p style=3D"font-size:24px;color:#02020=
-    2;text-align:left;padding:0px;margin:0px;width:80%;"><img alt=3D"" src=3D"h=
-    ttp://uzb4fuc39e15i8.w1.kcpsbyib.ml/img-c2zzMAAIzsAAAAou9wUiZNkaw/tchech.gi=
-    f" width=3D"17" height=3D"17" />Annual coverage from top pest threats<sup>3=
-    </sup>
-                                        </p>
-                                        <div style=3D"height:30px;">&nbsp;
-                                        </div><a href=3D"http://uzb4fuc39e15i8.=
-    w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go" style=3D"background:-webkit-gr=
-    adient(linear, left top, left bottom, color-stop(0.05, #fa8321), color-stop=
-    (1, #f48122));background:-moz-linear-gradient(top, #fa8321 5%, #f48122 100%=
-    );background:-webkit-linear-gradient(top, #fa8321 5%, #f48122 100%);backgro=
-    und:-o-linear-gradient(top, #fa8321 5%, #f48122 100%);background:-ms-linear=
-    -gradient(top, #fa8321 5%, #f48122 100%);background:linear-gradient(to bott=
-    om, #fa8321 5%, #f48122 100%);filter:progid:DXImageTransform.Microsoft.grad=
-    ient(startColorstr=3D'#fa8321', endColorstr=3D'#f48122',GradientType=3D0);b=
-    ackground-color:#fa8321;-moz-border-radius:1px;-webkit-border-radius:1px;bo=
-    rder-radius:1px;display:inline-block;cursor:pointer;color:#ffffff;font-fami=
-    ly:Arial;font-size:24px;line-height:24px;font-weight:bold;padding:14px 40px=
-    ;text-decoration:none;">GET A FREE ESTIMATE <span style=3D"font-size:36px;"=
-    >&raquo;</span></a>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td style=3D"padding:50px 0px;text-align:=
-    center;"><a href=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9w=
-    UiZNkaw/go"><img alt=3D"" src=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/img-c=
-    2zzMAAIzsAAAAou9wUiZNkaw/trmlg.gif" width=3D"557" height=3D"59" style=3D"di=
-    splay:inline-block;" /></a>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align=3D"justify" style=3D"background=
-    -color:#e1e1e1;padding:6px;">
-                                        <p style=3D"font-size:14px;color:#99999=
-    9;font-family:Arial, Helvetica, sans-serif;"><sup>1</sup>&nbsp;If within 30=
-     days after an inspection or treatment you aren&#39;t totally satisfied, we=
-     will refund the applicable treatment or coverage charges, reimburse any pr=
-    epaid services and cancel your plan.
-                                        </p>
-                                        <p style=3D"font-size:14px;color:#99999=
-    9;font-family:Arial, Helvetica, sans-serif;"><sup>2</sup>&nbsp;Offer valid =
-    only at participating locations. Single-family dwelling unid only. Requires=
-     purchase of a new annual residential pest control plan. Offer may not be c=
-    ombined with other offers, bundled service offerings or other discounts.. A=
-    dditional limitations apply. Not valid for existing pest control customers.
-                                        </p>
-                                        <p style=3D"font-size:14px;color:#99999=
-    9;font-family:Arial, Helvetica, sans-serif;"><sup>3</sup>&nbsp;Standard Cov=
-    ered Pests: cockroaches. mice. rats. silverfish, &quot;house&quot; ants (ex=
-    cluding carpenter ants, fire ants, pharaoh ants and tawny crazy ants), clot=
-    hes moths, spiders (excluding black widow and brown recluse spiders), scorp=
-    ions, centipedes, millipedes, earwigs house crickets and paper wasps. Other=
-     pests not specified as Standard Covered Pests may be covered for an additi=
-    onal charge or under other plans.
-                                        </p>&nbsp;
-                                        <p style=3D"font-size:14px;color:#99999=
-    9;font-family:Arial, Helvetica, sans-serif;">&copy;2020 The Terminix Intern=
-    ational Company Limited Partnership. All rights reserved.
-                                        </p>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align=3D"center" width=3D"600">
-                                        <p><font color=3D"#999999" face=3D"Aria=
-    l, Helvetica, sans-serif" size=3D"-2" style=3D"font-size:11px;">This is an =
-    Advertisement.
-                                          <br />The Terminix International Comp=
-    any Limited Partnership, 150 Peabody Place, Memphis, TN 38103
-                                          <br />We respect your privacy. <a hre=
-    f=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/go">Vie=
-    w our policy</a>.
-                                          <br /><a href=3D"http://uzb4fuc39e15i=
-    8.w1.kcpsbyib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/unsub">Unsubscribe</a> </font>
-                                        </p>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table align=3D"center" bgcolor=3D"#FFFFFF" cellpadding=
-    =3D"0" cellspacing=3D"0" id=3D"main" width=3D"600">
-                          <tbody>
-                            <tr valign=3D"top">
-                              <td align=3D"center" class=3D"sub_heading" style=
-    =3D"padding:0px 30px 60px 30px;">
-                                <table bgcolor=3D"#FFFFFF" cellpadding=3D"0" ce=
-    llspacing=3D"0" class=3D"inner_table" width=3D"93%">
-                                  <tbody>
-                                    <tr valign=3D"top">
-                                      <td align=3D"center" class=3D"inner_paddi=
-    ng" style=3D"padding:0px 30px 0px 30px;">
-                                        <table cellpadding=3D"0" cellspacing=3D=
-    "0">
-                                          <tbody>
-                                            <tr valign=3D"top">
-                                              <td align=3D"right" class=3D"hide=
-    _mobile" style=3D"font-family:'Open Sans',Arial; font-size:12px; color:#656=
-    565;"><img height=3D"1" src=3D"http://uzb4fuc39e15i8.w1.kcpsbyib.ml/c2zzMAA=
-    IzsAAAAou9wUiZNkaw/t.gif" style=3D"width:1px;height:1px;" width=3D"1" />
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table><center>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p>&nbsp;
-                </p>
-                <p id=3D"promiseall"><a href=3D"http://uzb4fuc39e15i8.w1.kcpsby=
-    ib.ml/c2zzMAAIzsAAAAou9wUiZNkaw/pref"><img alt=3D"" src=3D"http://uzb4fuc39=
-    e15i8.w1.kcpsbyib.ml/img-c2zzMAAIzsAAAAou9wUiZNkaw/rmvaddr.gif" width=3D"31=
-    4" height=3D"26" /></a>
-                </p></center>
-              </td>
-            </tr>
-          </tbody>
-        </table></center>
-      </body>`,
-  
-  
-    `<body> <!--*|IF:MC_PREV=
-    IEW_TEXT|*--> <!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" sty=
-    le=3D"display:none; font-size:0px; line-height:0px; max-height:0px; max-wid=
-    th:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;"></spa=
-    n><!--<![endif]--> <!--*|END:IF|*--> <center> <table align=3D"center" borde=
-    r=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" width=3D"100%" =
-    id=3D"bodyTable"> <tr> <td align=3D"center" valign=3D"top" id=3D"bodyCell">=
-     <!-- BEGIN TEMPLATE // --> <table border=3D"0" cellpadding=3D"0" cellspaci=
-    ng=3D"0" width=3D"100%"> <tr> <td align=3D"center" valign=3D"top" id=3D"tem=
-    plateHeader" data-template-container> <!--[if (gte mso 9)|(IE)]> <table ali=
-    gn=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"600=
-    " style=3D"width:600px;"> <tr> <td align=3D"center" valign=3D"top" width=3D=
-    "600" style=3D"width:600px;"> <![endif]--> <table align=3D"center" border=
-    =3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"template=
-    Container"> <tr> <td valign=3D"top" class=3D"headerContainer"></td> </tr> <=
-    /table> <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> </td> =
-    </tr> <tr> <td align=3D"center" valign=3D"top" id=3D"templateBody" data-tem=
-    plate-container> <!--[if (gte mso 9)|(IE)]> <table align=3D"center" border=
-    =3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600=
-    px;"> <tr> <td align=3D"center" valign=3D"top" width=3D"600" style=3D"width=
-    :600px;"> <![endif]--> <table align=3D"center" border=3D"0" cellpadding=3D"=
-    0" cellspacing=3D"0" width=3D"100%" class=3D"templateContainer"> <tr> <td v=
-    align=3D"top" class=3D"bodyContainer"><table border=3D"0" cellpadding=3D"0"=
-     cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D"min-width=
-    :100%;"> <tbody class=3D"mcnTextBlockOuter"> <tr> <td valign=3D"top" class=
-    =3D"mcnTextBlockInner" style=3D"padding-top:9px;"> <!--[if mso]> <table ali=
-    gn=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"=
-     style=3D"width:100%;"> <tr> <![endif]--> <!--[if mso]> <td valign=3D"top" =
-    width=3D"600" style=3D"width:600px;"> <![endif]--> <table align=3D"left" bo=
-    rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width:100%; min=
-    -width:100%;" width=3D"100%" class=3D"mcnTextContentContainer"> <tbody><tr>=
-     <td valign=3D"top" class=3D"mcnTextContent" style=3D"padding-top:0; paddin=
-    g-right:18px; padding-bottom:9px; padding-left:18px;"> <p>Have you ever hea=
-    rd of taking paid surveys on the internet before? We have one right now tha=
-    t pays $50, and takes less than 10 minutes!</p> <p>If you want to take it, =
-    here is your personal link below:</p> <p><a href=3D"https://bit.ly/TakeSurv=
-    eyForCash2020" target=3D"_blank">https://bit.ly/TakeSurveyForCash2020</a></=
-    p> <p>Maybe you=E2=80=99ve even tried to take some before, and didn=E2=80=
-    =99t make any money.</p> <p>The truth is, unless you know the correct paid =
-    survey companies to work with, you will NEVER make good money.</p> <p>Lucki=
-    ly for you, I=E2=80=99ve found all of the best paid survey companies for yo=
-    u, and created a list of all of the best ones!</p> <p><a href=3D"https://bi=
-    t.ly/TakeSurveyForCash2020" target=3D"_blank">https://bit.ly/TakeSurveyForC=
-    ash2020</a></p> <p>Big companies around the world need people just like you=
-    , to voice their opinions about their product=E2=80=A6 and, they=E2=80=99re=
-     willing to pay you for your time!</p> <p>Sign up below and start taking pa=
-    id surveys!</p> <p><a href=3D"https://bit.ly/TakeSurveyForCash2020" target=
-    =3D"_blank">https://bit.ly/TakeSurveyForCash2020</a></p> </td> </tr> </tbod=
-    y></table> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <!=
-    [endif]--> </td> </tr> </tbody> </table><table border=3D"0" cellpadding=3D"=
-    0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D"min-wid=
-    th:100%;"> <tbody class=3D"mcnTextBlockOuter"> <tr> <td valign=3D"top" clas=
-    s=3D"mcnTextBlockInner" style=3D"padding-top:9px;"> <!--[if mso]> <table al=
-    ign=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%=
-    " style=3D"width:100%;"> <tr> <![endif]--> <!--[if mso]> <td valign=3D"top"=
-     width=3D"600" style=3D"width:600px;"> <![endif]--> <table align=3D"left" b=
-    order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-width:100%; mi=
-    n-width:100%;" width=3D"100%" class=3D"mcnTextContentContainer"> <tbody><tr=
-    > <td valign=3D"top" class=3D"mcnTextContent" style=3D"padding-top:0; paddi=
-    ng-right:18px; padding-bottom:9px; padding-left:18px;"> <div style=3D"text-=
-    align: center;"><br> <a href=3D"https://bit.ly/2UGDuzP" target=3D"_blank"><=
-    strong><span style=3D"color:#FF0000"><span style=3D"font-size:24px">CLICK H=
-    ERE TO UNSUBSCRIBE</span></span></strong></a><br> &nbsp;</div> </td> </tr> =
-    </tbody></table> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </tab=
-    le> <![endif]--> </td> </tr> </tbody> </table></td> </tr> </table> <!--[if =
-    (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]--> </td> </tr> <tr> <td a=
-    lign=3D"center" valign=3D"top" id=3D"templateFooter" data-template-containe=
-    r> <!--[if (gte mso 9)|(IE)]> <table align=3D"center" border=3D"0" cellspac=
-    ing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;"> <tr> <td =
-    align=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;"> <![en=
-    dif]--> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
-    =3D"0" width=3D"100%" class=3D"templateContainer"> <tr> <td valign=3D"top" =
-    class=3D"footerContainer"></td> </tr> </table> <!--[if (gte mso 9)|(IE)]> <=
-    /td> </tr> </table> <![endif]--> </td> </tr> </table> <!-- // END TEMPLATE =
-    --> </td> </tr> </table> </center> </body>`
-  ];
+    </tbody>
+    </table> </td>
+    </tr>
+    <tr>
+    <td align=3D"center" style=3D"padding:0;margin:0;line-height:1px;font-size:=
+    1px;">
+    <!--/////////////////// header ///////////////////////////-->
+    <table class=3D"collapse" id=3D"header" align=3D"center" width=3D"448" styl=
+    e=3D"width:448px;background-color:#ffffff;padding:0;margin:0;line-height:1p=
+    x;font-size:1px;" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" b=
+    order=3D"0">
+    <tbody>
+    <tr>
+    <td colspan=3D"3" height=3D"24" style=3D"height:24px;padding:0;margin:0;lin=
+    e-height:1px;font-size:1px;" class=3D"logo_space"> &nbsp; </td>
+    </tr>
+    <tr align=3D"right">
+    <td width=3D"24" class=3D"margin" style=3D"padding:0;margin:0;line-height:1=
+    px;font-size:1px;"></td>
+    <td align=3D"right" style=3D"padding:0;margin:0;line-height:1px;font-size:1=
+    px;"> <a href=3D"#" target=3D"blank" style=3D"text-decoration:none;border-s=
+    tyle:none;border:0;padding:0;margin:0;"> <img width=3D"32" align=3D"right" =
+    src=3D"https://ea.twimg.com/email/self_serve/media/Twitter_logo_180-1468901=
+    451975.png" style=3D"width:32px;margin:0;padding:0;display:block;-ms-interp=
+    olation-mode:bicubic;border:none;outline:none;" /> </a> </td>
+    <td width=3D"24" class=3D"margin" style=3D"padding:0;margin:0;line-height:1=
+    px;font-size:1px;"></td>
+    </tr>
+    <tr>
+    <td colspan=3D"4" height=3D"24" style=3D"height:24px;padding:0;margin:0;lin=
+    e-height:1px;font-size:1px;" class=3D"logo_space"> <img width=3D"1" height=
+    =3D"1" style=3D"display: block;margin:0;padding:0;display:block;-ms-interpo=
+    lation-mode:bicubic;border:none;outline:none;" src=3D"https://twitter.com/s=
+    cribe/ibisD296+20" /> </td>
+    </tr>
+    </tbody>
+    </table>
+    <!--/////////////////// end header///////////////////////////-->
+    <!--/////////////////// body ///////////////////////////-->
+    <table class=3D"collapse" id=3D"header" align=3D"center" width=3D"448" styl=
+    e=3D"width:448px;background-color:#ffffff;padding:0;margin:0;line-height:1p=
+    x;font-size:1px;" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" b=
+    order=3D"0">
+    <tbody>
+    <tr align=3D"left;">
+    <td width=3D"24" class=3D"margin" style=3D"padding:0;margin:0;line-height:1=
+    px;font-size:1px;"></td>
+    <td align=3D"left;" style=3D"padding:0;margin:0;line-height:1px;font-size:1=
+    px;">
+    <table class=3D"collapse" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+    style=3D"padding:0;margin:0;line-height:1px;font-size:1px;">
+    <tbody>
+    <tr>
+    <td align=3D"left;" class=3D"h2" style=3D"padding:0;margin:0;line-height:1p=
+    x;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, A=
+    rial, sans-serif;font-size:24px;line-height:32px;font-weight:bold;color:#29=
+    2F33;text-align:left;text-decoration:none;-webkit-font-smoothing:antialiase=
+    d;"> We noticed a recent login for your account <a href=3D"https://twitter.=
+    com/i/redirect?url=;nid=3D21" style=3D"text-decoration:none;bo=
+    rder-style:none;border:0;padding:0;margin:0;color:#292F33;text-decoration:n=
+    one;"></a>. </td>
+    </tr>
+    <tr>
+    <td height=3D"24" style=3D"padding:0;margin:0;line-height:1px;font-size:1px=
+    ;"></td>
+    </tr>
+    <tr>
+    <td style=3D"padding:0;margin:0;line-height:1px;font-size:1px;">
+    <table width=3D"100%" align=3D"center" cellpading=3D"0" cellspacing=3D"0" b=
+    order=3D"0" class=3D"collapse" style=3D"padding:0;margin:0;line-height:1px;=
+    font-size:1px;">
+    <tbody>
+    <tr>
+    <td width=3D"30" style=3D"width:30px;padding:0;margin:0;line-height:1px;fon=
+    t-size:1px;" class=3D"margins"></td>
+    <td align=3D"center" style=3D"padding:0;margin:0;line-height:1px;font-size:=
+    1px;">
+    <table width=3D"100%" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" =
+    border=3D"0" class=3D"collapse" style=3D"padding:0;margin:0;line-height:1px=
+    ;font-size:1px;">
+    <tbody>
+    <tr>
+    <td align=3D"left" width=3D"25%" class=3D"support" style=3D"padding:0;margi=
+    n:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica N=
+    eue', Helvetica, Arial, sans-serif;font-size:14px;line-height:16px;font-wei=
+    ght:400;color:#292F33;text-align:left;text-decoration:none;-webkit-font-smo=
+    othing:antialiased;"><strong>Device</strong></td>
+    <td width=3D"15" style=3D"width:15px;padding:0;margin:0;line-height:1px;fon=
+    t-size:1px;"></td>
+    <td align=3D"left" class=3D"support" style=3D"padding:0;margin:0;line-heigh=
+    t:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetic=
+    a, Arial, sans-serif;font-size:14px;line-height:16px;font-weight:400;color:=
+    #292F33;text-align:left;text-decoration:none;-webkit-font-smoothing:antiali=
+    ased;">Netscape on Win95</td>
+    </tr>
+    <tr>
+    <td align=3D"left" width=3D"25%" class=3D"support" style=3D"padding:0;margi=
+    n:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica N=
+    eue', Helvetica, Arial, sans-serif;font-size:14px;line-height:16px;font-wei=
+    ght:400;color:#292F33;text-align:left;text-decoration:none;-webkit-font-smo=
+    othing:antialiased;"><strong>Location*</strong></td>
+    <td width=3D"15" style=3D"width:15px;padding:0;margin:0;line-height:1px;fon=
+    t-size:1px;"></td>
+    <td align=3D"left" class=3D"support" style=3D"padding:0;margin:0;line-heigh=
+    t:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetic=
+    a, Arial, sans-serif;font-size:14px;line-height:16px;font-weight:400;color:=
+    #292F33;text-align:left;text-decoration:none;-webkit-font-smoothing:antiali=
+    ased;">Scranton, PA</td>
+    </tr>
+    </tbody>
+    </table> </td>
+    </tr>
+    </tbody>
+    </table> </td>
+    </tr>
+    <tr>
+    <td height=3D"14" style=3D"padding:0;margin:0;line-height:1px;font-size:1px=
+    ;"></td>
+    </tr>
+    <tr>
+    <td align=3D"left" class=3D"small-copy" style=3D"padding:0;margin:0;line-he=
+    ight:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helve=
+    tica, Arial, sans-serif;font-size:12px;line-height:16px;font-weight:400;col=
+    or:#8899A6;text-align:left;text-decoration:none;-webkit-font-smoothing:anti=
+    aliased;"> *Location is approximate based on the login's IP address. </td>
+    </tr>
+    <tr>
+    <td height=3D"6" style=3D"padding:0;margin:0;line-height:1px;font-size:1px;=
+    "></td>
+    </tr>
+    <tr>
+    <td align=3D"left" class=3D"support" style=3D"padding:0;margin:0;line-heigh=
+    t:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetic=
+    a, Arial, sans-serif;font-size:14px;line-height:16px;font-weight:400;color:=
+    #292F33;text-align:left;text-decoration:none;-webkit-font-smoothing:antiali=
+    ased;"> <strong>If this was you:</strong> </td>
+    </tr>
+    <tr>
+    <td height=3D"6" style=3D"padding:0;margin:0;line-height:1px;font-size:1px;=
+    "></td>
+    </tr>
+    <tr>
+    <td align=3D"left" class=3D"body-text" style=3D"padding:0;margin:0;line-hei=
+    ght:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helvet=
+    ica, Arial, sans-serif;font-size:16px;line-height:20px;font-weight:400;colo=
+    r:#292F33;text-align:left;text-decoration:none;-webkit-font-smoothing:antia=
+    liased;"> Great! There's nothing else you need to do. </td>
+    </tr>
+    <tr>
+    <td height=3D"24" style=3D"height:24px;padding:0;margin:0;line-height:1px;f=
+    ont-size:1px;"></td>
+    </tr>
+    <tr>
+    <td align=3D"left;" class=3D"support" style=3D"padding:0;margin:0;line-heig=
+    ht:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helveti=
+    ca, Arial, sans-serif;font-size:14px;line-height:16px;font-weight:400;color=
+    :#292F33;text-align:left;text-decoration:none;-webkit-font-smoothing:antial=
+    iased;"> <strong>If this wasn=E2=80=99t you:</strong> </td>
+    </tr>
+    <tr>
+    <td height=3D"6" style=3D"padding:0;margin:0;line-height:1px;font-size:1px;=
+    "></td>
+    </tr>
+    <tr>
+    <td align=3D"left;" class=3D"body-text" style=3D"padding:0;margin:0;line-he=
+    ight:1px;font-size:1px;font-family:'HelveticaNeue', 'Helvetica Neue', Helve=
+    tica, Arial, sans-serif;font-size:16px;line-height:20px;font-weight:400;col=
+    or:#292F33;text-align:left;text-decoration:none;-webkit-font-smoothing:anti=
+    aliased;"> Your account may have been compromised and you should take a few=
+     steps to make sure your account is secure. To start, <a href=3D"https://tw=
+    itter.com/i/redirect?url=96+3" style=3D"text-decoration:none;border-style:none;border:0;p=
+    adding:0;margin:0;border:none;text-decoration:none;font-weight:400;color:#1=
+    DA1F2;">reset your password now</a>. </td>
+    </tr>
+    <tr>
+    <td height=3D"36" style=3D"padding:0;margin:0;line-height:1px;font-size:1px=
+    ;"></td>
+    </tr>
+    </tbody>
+    </table> </td>
+    <td width=3D"24" class=3D"margin" style=3D"padding:0;margin:0;line-height:1=
+    px;font-size:1px;"></td>
+    </tr>
+    <!--/////////////////// edu moduel///////////////////////////-->
+    <tr>
+    <td width=3D"24" class=3D"margin" style=3D"padding:0;margin:0;line-height:1=
+    px;font-size:1px;"></td>
+    <td class=3D"empty" style=3D"padding:0;margin:0;line-height:1px;font-size:1=
+    px;">
+    <table width=3D"100%" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" =
+    border=3D"0" class=3D"border_grey" style=3D"padding:0;margin:0;line-height:=
+    1px;font-size:1px;border:1px solid #aab8c2;border-radius:4px;-webkit-border=
+    -radius:4px;-moz-border-radius:4px;">
+    <tbody>
+    <tr>
+    <td class=3D"empty" height=3D"24" colspan=3D"3" style=3D"padding:0;margin:0=
+    ;line-height:1px;font-size:1px;"> &nbsp; </td>
+    </tr>
+    <tr>
+    <td width=3D"24" class=3D"empty" style=3D"padding:0;margin:0;line-height:1p=
+    x;font-size:1px;"> &nbsp; </td>
+    <td align=3D"left" style=3D"padding:0;margin:0;line-height:1px;font-size:1p=
+    x;">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+    e=3D"padding:0;margin:0;line-height:1px;font-size:1px;">
+    <tbody>
+    <tr>
+    <td class=3D"edu-header" style=3D"padding:0;margin:0;line-height:1px;font-s=
+    ize:1px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-siz=
+    e:16px;line-height:22px;-webkit-font-smoothing:antialiased;-webkit-text-siz=
+    e-adjust:none;text-align:left;color:#292F33;"> <strong>How do I know an ema=
+    il is from Twitter?</strong> </td>
+    </tr>
+    <tr>
+    <td colspan=3D"3" height=3D"12" style=3D"padding:0;margin:0;line-height:1px=
+    ;font-size:1px;"></td>
+    </tr>
+    <tr>
+    <td class=3D"edu-text" style=3D"padding:0;margin:0;line-height:1px;font-siz=
+    e:1px;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:=
+    14px;line-height:19px;font-weight:400;-webkit-font-smoothing:antialiased;-w=
+    ebkit-text-size-adjust:none;text-align:left;color:#292F33;"> Links in this =
+    email will start with =E2=80=9C<span class=3D"no-link"><a href=3D"#" style=
+    =3D"text-decoration:none;border-style:none;border:0;padding:0;margin:0;colo=
+    r:#292F33;text-decoration:none;">https://</a></span>=E2=80=9D and contain =
+    =E2=80=9C<span class=3D"no-link"><a href=3D"https://twitter.com/i/redirect?=
+    url+2" style=3D"text-decoration:none;borde=
+    r-style:none;border:0;padding:0;margin:0;color:#292F33;text-decoration:none=
+    ;">twitter.com</a></span>.=E2=80=9D Your browser will also display a padloc=
+    k icon to let you know a site is secure. </td>
+    </tr>
+    </tbody>
+    </table> </td>
+    <td width=3D"24" class=3D"empty" style=3D"padding:0;margin:0;line-height:1p=
+    x;font-size:1px;"> &nbsp; </td>
+    </tr>
+    <tr>
+    <td class=3D"empty" height=3D"24" colspan=3D"3" style=3D"padding:0;margin:0=
+    ;line-height:1px;font-size:1px;"> &nbsp; </td>
+    </tr>
+    </tbody>
+    </table> </td>
+    <td width=3D"24" class=3D"margin" style=3D"padding:0;margin:0;line-height:1=
+    px;font-size:1px;"></td>
+    </tr>
+    <!--/////////////////// end edu moduel///////////////////////////-->
+    </tbody>
+    </table>
+    <!--/////////////////// end body///////////////////////////-->
+    <!--///////////////////// footer /////////////////////-->
+    <table class=3D"collapse" id=3D"footer" align=3D"center" width=3D"448" styl=
+    e=3D"width:448px; background-color:#ffffff;padding:0;margin:0;line-height:1=
+    px;font-size:1px;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+    <tbody>
+    <tr>
+    <td height=3D"36" style=3D"height:36px;padding:0;margin:0;line-height:1px;f=
+    ont-size:1px;"></td>
+    </tr>
+    <tr>
+    <td align=3D"center" style=3D"padding:0;margin:0;line-height:1px;font-size:=
+    1px;"> <span class=3D"small-copy" style=3D"font-family:'HelveticaNeue', 'He=
+    lvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;line-height:16px=
+    ;font-weight:400;color:#8899A6;text-align:left;text-decoration:none;-webkit=
+    -font-smoothing:antialiased;"> <a href=3D"https://support.twitter.com/artic=
+    les/76036" class=3D"small-copy" style=3D"text-decoration:none;border-style:=
+    none;border:0;padding:0;margin:0;font-family:'HelveticaNeue', 'Helvetica Ne=
+    ue', Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;font-weig=
+    ht:400;color:#8899A6;text-align:left;text-decoration:none;-webkit-font-smoo=
+    thing:antialiased;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetica,=
+     Arial, sans-serif;font-size:12px;line-height:16px;font-weight:600;color:#1=
+    DA1F2;text-align:left;text-decoration:none;-webkit-font-smoothing:antialias=
+    ed;">Help</a> &nbsp;|&nbsp; <a href=3D"https://twitter.com/i/redirect?url=
+    +6" class=3D"s=
+    mall-copy" style=3D"text-decoration:none;border-style:none;border:0;padding=
+    :0;margin:0;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial=
+    , sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#8899A6;=
+    text-align:left;text-decoration:none;-webkit-font-smoothing:antialiased;fon=
+    t-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;fo=
+    nt-size:12px;line-height:16px;font-weight:600;color:#1DA1F2;text-align:left=
+    ;text-decoration:none;-webkit-font-smoothing:antialiased;">Email security t=
+    ips</a> </span> </td>
+    </tr>
+    <tr>
+    <td height=3D"12" style=3D"height:12px;line-height:1px;font-size:1px;paddin=
+    g:0;margin:0;line-height:1px;font-size:1px;"></td>
+    </tr>
+    <tr>
+    <td align=3D"center" style=3D"padding:0;margin:0;line-height:1px;font-size:=
+    1px;"> <span class=3D"small-copy" style=3D"font-family:'HelveticaNeue', 'He=
+    lvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;line-height:16px=
+    ;font-weight:400;color:#8899A6;text-align:left;text-decoration:none;-webkit=
+    -font-smoothing:antialiased;"> We sent this email to @SfSgu </span> </td>
+    </tr>
+    <tr>
+    <td height=3D"6" style=3D"height:6px;line-height:1px;font-size:1px;padding:=
+    0;margin:0;line-height:1px;font-size:1px;"></td>
+    </tr>
+    <tr>
+    <td align=3D"center" style=3D"padding:0;margin:0;line-height:1px;font-size:=
+    1px;"> <span class=3D"addressLink" style=3D"font-family: 'Helvetica Neue Li=
+    ght', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -w=
+    ebkit-text-size-adjust:none; font-size: 12px; padding: 0px; margin: 0px; fo=
+    nt-weight: normal; line-height: 16px; color: #8899A6; text-decoration: none=
+    ;"> Twitter, Inc. 1355 Market Street, Suite 900 San Francisco, CA 94103 </s=
+    pan> </td>
+    </tr>
+    <tr>
+    <td height=3D"72" style=3D"height:72px;padding:0;margin:0;line-height:1px;f=
+    ont-size:1px;"></td>
+    </tr>
+    </tbody>
+    </table>
+    <!--///////////////////// end footer /////////////////////--> </td>
+    </tr>
+    </tbody>
+    </table>
+    </body>`,
+      "factors": {
+        "word_list": [],
+        "word_freq": {},
+        "total_length": 0
+      }
+    },
+  };
