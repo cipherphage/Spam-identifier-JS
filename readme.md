@@ -6,16 +6,36 @@
 - `spam.js` and `email.js` contain arrays of the known and unknown (respectively) email bodies.
 - `test-runner.html` and `test-spam-id.js` test the code. Simply drag test-runner.html into your browser.
 - WARNING: the emails in `spam.js` and `email.js` are actual emails. The URLs in them could be malicious!
+- The `spamIdentifier` function in `spam-id.js` is the entry-point. It takes two arrays as arguments: one known spam email array and one unknown email array.  The function returns an email collection with the following structure:
+```javascript
+    Email {
+      "emails": Array [
+          EmailBody {
+              "body": String,
+              "factors": Object {
+                  "num_words": Number,
+                  "num_unique_words": Number,
+                  "total_length": Number,
+                  "words_object": Object {
+                      <word>: String <frequency>
+                  }
+              }
+              "spamCheck": Boolean,
+              "isSpam": Boolean
+          }, ...
+      ]
+   }
+```
 
 ## Step 1: naive implementation
-Weighted factors to compare similarity:
+Currently implemented weighted factors for comparing similarity:
 - Number of words.
 - Number of unique words.
 - Word choice.
 - Word frequency.
 - Overall length (to account for possible issues parsing HTML into words we should consider both word count and total length).
 
-Would strongly consider marking as spam (and blocking some content) emails that contain:
+Haven't implemented, but would strongly consider marking as spam (and blocking some content) emails that contain:
 - Data URIs (e.g., to prevent [click-jacking][3]).
 - Embedded JavaScript.
 - Non-HTTPS links (this one might mark too many non-spam as spam so we could take into account ratio of HTTP to HTTPS or consider anchor tag `href`s which ought to be HTTPS versus image tag `src`s which conceivably could be HTTP without security risk, although it would still be a privacy risk).
