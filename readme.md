@@ -4,8 +4,8 @@
 - `spam-id.js` brings everything together to check email bodies against known spam.
 - `models.js` contains the `EmailBody` and `Email` class definitions.
 - `spam.js` and `email.js` contain arrays of the known and unknown (respectively) email bodies.
-- `test-runner.html` and `test-spam-id.js` test the code.
-- WARNING: the emails in `spam.js` are actual spam emails. The URLs in them could be malicious!
+- `test-runner.html` and `test-spam-id.js` test the code. Simply drag test-runner.html into your browser.
+- WARNING: the emails in `spam.js` and `email.js` are actual emails. The URLs in them could be malicious!
 
 ## Step 1: naive implementation
 Weighted factors to compare similarity:
