@@ -26,10 +26,11 @@ Notes:
 - Could use a 3rd party service to check URLs against known spammers/phishers.
 - Links containing the `ml` (Mali) and `tk` (Tokelau, New Zealand) domains seem to be associated with my spam mail, but without more data I don't want to assume this is always true.
 
-## Step 2: consider using the `natural` NPM package to perform more robust Natural Language Processing
+## Step 2: consider using the [natural][4] NPM package to perform more robust Natural Language Processing
 
 ## Step 3: consider methods to optimize performance (e.g., at least get it off of the main thread)
 
 [1]:https://en.wikipedia.org/wiki/IDN_homograph_attack
 [2]:https://en.wikipedia.org/wiki/Typosquatting
-[3]:
+[3]:https://endeneu.blog/2017/03/12/anatomy-of-an-ad-based-clickjacker/
+[4]:https://github.com/NaturalNode/natural
