@@ -1,4 +1,5 @@
 
+// knownspam is emailCollection index 7
 describe('Testing the validator', () => {
   it('should show error for invalid url', () => {
     let result = validateURL("this isn't a url!");

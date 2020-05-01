@@ -1,6 +1,6 @@
-var emailsToCheck = {
-    "a": {
-      "body": `Hi,=20
+// note: only index 7 is spam, the rest are not spam
+var emails = [
+    `Hi,=20
     We have you scheduled to come in this Thursday March 19th at 10am for a cle=
     aning but our office will be closed for the next two weeks. We will re-open=
      Monday April 6th. We would like to reschedule your appointment for some ti=
@@ -10,16 +10,9 @@ var emailsToCheck = {
     *To cancel or reschedule your appointment, please call within 24 hours to a=
     void a $50 cancellation fee.Dark Side Dental Inc. 314 Crater St=
     . 3rd Fl Sea of Tranquility, Moon =C2=A0www.google.com=C2=A0`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
 
     
-    "b": {
-      "body": `<body><div class=3D"ydpb945f720yahoo-style-wrap" style=
+    `<body><div class=3D"ydpb945f720yahoo-style-wrap" style=
     =3D"font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px=
     ;"><div dir=3D"ltr" data-setdir=3D"false"><div dir=3D"ltr" data-setdir=3D"f=
     alse">Hi,</div> <div><div><br></div><div>We have you scheduled to co=
@@ -41,16 +34,9 @@ var emailsToCheck = {
     .com/" rel=3D"nofollow" target=3D"_blank"><font size=3D"4" face=3D=
     "garamond, new york, times, serif">www.google.com</font></a></div=
     ><div><font face=3D"Arial"></font>&nbsp;</div></div></div></div></body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "c": {
-      "body": `<body styl=
+    `<body styl=
     e=3D"margin: 0; padding: 0;" bgcolor=3D#FFFFFF><img src=3Dhttps://notificat=
     ions.googleapis.com/email/t/AFG8qyX-TaWrq8SBsUK1fL8wv4n0TKu4iWCUvRQK1BXm-_j=
     aPDig8bJ6Xa4B5RCV2h0tmmm2_lw4A-W0RpgxMuGQ9Y8VqoEkWBWGAyiMMrU5bWUw3z9zd4VhH5=
@@ -107,16 +93,9 @@ var emailsToCheck = {
     CA 94043, USA</a></div></div></div></td><td width=3D8 style=3D"width: 8px;"=
     ></td></tr></table></td></tr><tr height=3D32 style=3D"height: 32px;"><td></=
     td></tr></table></body></html>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "d": {
-      "body": `Hi!!
+    `Hi!!
 
     Dang it just got super cold out! But don't worry we got your
     back with some awesome battery powered heated clothing!
@@ -155,16 +134,9 @@ var emailsToCheck = {
     ZVx.
     
     1800 Wazee St, Denver, CO 80202, United States`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "e": {
-      "body": `<body style=3D"background-color: #ffffff; -webkit-text-size-=
+    `<body style=3D"background-color: #ffffff; -webkit-text-size-=
     adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;" bgcolor=
     =3D"#ffffff"><span style=3D"display: none !important; mso-hide: all; visibi=
     lity: hidden; opacity: 0;">And Get Free Shipping!!!</span><div style=3D"bac=
@@ -438,16 +410,9 @@ var emailsToCheck = {
     adding-top:0 !important;padding-bottom:0 !important;padding-right:0 !import=
     ant;padding-left:0 !important;"/>
     </body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "f": {
-      "body": `Twitter
+    `Twitter
 
     We noticed a recent login for your account.
     Device: Chrome on Windows
@@ -463,16 +428,9 @@ var emailsToCheck = {
     > https://twitter.com/account/confirm_email_reset?reset_type=3De&password_r=
     eset_cause=3Dlogin_notification&token_version=3D0&c=
     onfirm_pending_email=3D0`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "g": {
-      "body": `<body bgcolor=3D"#ffffff" style=3D"margin:0;padding:0;-webkit-text-size-adj=
+    `<body bgcolor=3D"#ffffff" style=3D"margin:0;padding:0;-webkit-text-size-adj=
     ust:100%;-ms-text-size-adjust:100%;">
     <style type=3D"text/css">
     .addressLink a { color: #8899A6 !important; text-decoration: none !importan=
@@ -813,10 +771,341 @@ var emailsToCheck = {
     </tbody>
     </table>
     </body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
-  };
+
+      // only this one (index 7) is spam
+    `<table class=3D"body" data-made-with-foundation=3D"" style=3D"margin:0 auto=
+    ;">
+      <tbody>
+        <tr>
+          <td align=3D"center" class=3D"float-center" valign=3D"top">
+            <table align=3D"center" class=3D"wrapper header float-center">
+              <tbody>
+                <tr>
+                  <td class=3D"wrapper-inner">
+                    <table align=3D"center" class=3D"container">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <table class=3D"row collapse">
+                              <tbody>
+                                <tr>
+                                  <th class=3D"small-6 large-6 columns first">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <th><a href=3D"http://wpb51vhr9114sk.=
+    w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go"><img alt=3D"" src=3D"http=
+    ://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/klogo.j=
+    pg" width=3D"278" height=3D"56" /> </a>
+                                          </th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class=3D"small-6 large-6 columns last">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <th><a href=3D"http://wpb51vhr9114sk.=
+    w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go" style=3D"text-align: righ=
+    t; display: block; padding-left: 20px;"><img alt=3D"" src=3D"http://wpb51vh=
+    r9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/cta1.jpg" width=
+    =3D"289" height=3D"56" /> </a>
+                                          </th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table align=3D"center" class=3D"container float-center">
+              <tbody>
+                <tr>
+                  <td>
+                    <table class=3D"spacer">
+                      <tbody>
+                        <tr>
+                          <td height=3D"16px" style=3D"font-size:16px;line-heig=
+    ht:16px;">&nbsp;
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class=3D"row">
+                      <tbody>
+                        <tr>
+                          <th class=3D"small-12 large-12 columns first last">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th><center><a href=3D"http://wpb51vhr9114sk.=
+    w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go"><img alt=3D"" src=3D"http=
+    ://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/banner.=
+    jpg" width=3D"650" height=3D"285" /> </a></center>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"16px" style=3D"font-siz=
+    e:16px;line-height:16px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <h1 class=3D"text-center">We Will Not Let O=
+    ur Hair Define Our Age!
+                                    </h1>
+                                    <p class=3D"lead text-center">Turn back the=
+    clock and regrow thicker, fuller, shinier hair with Keranique&reg;
+                                    </p><center><a href=3D"http://wpb51vhr9114s=
+    k.w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go"><img alt=3D"" src=3D"ht=
+    tp://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/produ=
+    ct.jpg" width=3D"650" height=3D"531" /> </a></center><center><a href=3D"htt=
+    p://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go"><img a=
+    lt=3D"" src=3D"http://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAAC=
+    gu9wUJj0hXg/cta2.jpg" width=3D"524" height=3D"91" /> </a></center>
+                                  </th>
+                                  <th class=3D"expander">&nbsp;
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class=3D"row">
+                      <tbody>
+                        <tr>
+                          <th class=3D"small-12 large-12 columns first last">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <th>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"16px" style=3D"font-siz=
+    e:16px;line-height:16px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p class=3D"text-center" style=3D"font-size=
+    : 20px">Keranique&reg; Hair Regrowth System
+                                    </p>
+                                    <h3 class=3D"text-center">Trusted by Over 1=
+    ,976,077 Women!
+                                    </h3>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"16px" style=3D"font-siz=
+    e:18px;line-height:16px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <p class=3D"text-left list-mark" style=3D"m=
+    argin-left: 5px"><img alt=3D"" src=3D"http://wpb51vhr9114sk.w8822-7d11.pmat=
+    5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/check.jpg" width=3D"31" height=3D"30" />=
+    <span class=3D"auto-style2">FDA Approved Ingredient to Regrow Hair</span>
+                                    </p>
+                                    <p class=3D"text-left list-mark" style=3D"m=
+    argin-left: 5px"><img alt=3D"" src=3D"http://wpb51vhr9114sk.w8822-7d11.pmat=
+    5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/check.jpg" width=3D"31" height=3D"30" />=
+    <span class=3D"auto-style2">Clinically Proven to Work for All Hair Types</s=
+    pan>
+                                    </p>
+                                    <p class=3D"text-left list-mark" style=3D"m=
+    argin-left: 5px"><img alt=3D"" src=3D"http://wpb51vhr9114sk.w8822-7d11.pmat=
+    5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/check.jpg" width=3D"31" height=3D"30" />=
+    <span class=3D"auto-style2">Gentle for Color Treated Hair</span>
+                                    </p>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"16px" style=3D"font-siz=
+    e:16px;line-height:16px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table><center><a href=3D"http://wpb51vhr9=
+    114sk.w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go"><img alt=3D"" src=
+    =3D"http://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg=
+    /slider.jpg" width=3D"650" height=3D"780" /> </a></center>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"32px" style=3D"font-siz=
+    e:32px;line-height:32px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class=3D"expander">&nbsp;
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table align=3D"center" class=3D"row">
+                      <tbody>
+                        <tr>
+                          <th class=3D"small-12 large-12 columns first last">
+                            <table align=3D"center">
+                              <tbody>
+                                <tr>
+                                  <th>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"16px" style=3D"font-siz=
+    e:16px;line-height:16px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table><center><a href=3D"http://wpb51vhr9=
+    114sk.w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go"><img alt=3D"" src=
+    =3D"http://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg=
+    /cta2.jpg" width=3D"524" height=3D"91" /> </a></center>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"32px" style=3D"font-siz=
+    e:32px;line-height:32px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table><center><img alt=3D"" src=3D"http:/=
+    /wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0AAABTBAACgu9wUJj0hXg/stars-big=
+    .jpg" width=3D"250" height=3D"47" /></center>
+                                    <h3 class=3D"text-center">4.9 Star out of 5
+                                    </h3>
+                                    <p class=3D"text-center">Real Users - 100% =
+    Real Results
+                                    </p>
+                                  </th>
+                                  <th class=3D"expander">&nbsp;
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table align=3D"center" class=3D"row">
+                      <tbody>
+                        <tr>
+                          <th class=3D"small-12 large-12 columns first last">
+                            <table align=3D"center">
+                              <tbody>
+                                <tr>
+                                  <th><center><a class=3D"semi-bold" href=3D"ht=
+    tp://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/go">Click=
+    Here to fight back against hair loss</a></center>
+                                    <table class=3D"spacer">
+                                      <tbody>
+                                        <tr>
+                                          <td height=3D"32px" style=3D"font-siz=
+    e:32px;line-height:32px;">&nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </th>
+                                  <th class=3D"expander">&nbsp;
+                                  </th>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <br><br>
+                            <p>
+                              &nbsp;
+                            </p>
+                            <p style=3D"text-align:center;">=F0=9D=98=90=F0=9D=
+    =98=A7 =F0=9D=98=BA=F0=9D=98=B0=F0=9D=98=B6 =F0=9D=98=B8=F0=9D=98=B0=F0=9D=
+    =98=B6=F0=9D=98=AD=F0=9D=98=A5 =F0=9D=98=AF=F0=9D=98=B0 =F0=9D=98=AD=F0=9D=
+    =98=B0=F0=9D=98=AF=F0=9D=98=A8=F0=9D=98=A6=F0=9D=98=B3 =F0=9D=98=AD=F0=9D=
+    =98=AA=F0=9D=98=AC=F0=9D=98=A6 =F0=9D=98=B5=F0=9D=98=B0 =F0=9D=98=B3=F0=9D=
+    =98=A6=F0=9D=98=A4=F0=9D=98=A6=F0=9D=98=AA=F0=9D=98=B7=F0=9D=98=A6 =F0=9D=
+    =98=A6=F0=9D=98=AE=F0=9D=98=A2=F0=9D=98=AA=F0=9D=98=AD =F0=9D=98=A2=F0=9D=
+    =98=A5=F0=9D=98=B7=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=B5=F0=9D=98=AA=F0=9D=98=
+    =B4=F0=9D=98=A6=F0=9D=98=AE=F0=9D=98=A6=F0=9D=98=AF=F0=9D=98=B5=F0=9D=98=B4
+                              <br />=F0=9D=98=A7=F0=9D=98=B3=F0=9D=98=B0=F0=9D=
+    =98=AE =F0=9D=98=8E=F0=9D=98=A6=F0=9D=98=B5=F0=9D=98=92=F0=9D=98=A6=F0=9D=
+    =98=B3=F0=9D=98=A2=F0=9D=98=AF=F0=9D=98=AA=F0=9D=98=B2=F0=9D=98=B6=F0=9D=98=
+    =A6,&nbsp;<a href=3D"http://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/ck0AAABTBA=
+    ACgu9wUJj0hXg/unsub">=F0=9D=98=A4=F0=9D=98=AD=F0=9D=98=AA=F0=9D=98=A4=F0=9D=
+    =98=AC =F0=9D=98=A9=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=A6</a> =F0=9D=98=B0=F0=
+    =9D=98=B3 =F0=9D=98=B8=F0=9D=98=B3=F0=9D=98=AA=F0=9D=98=B5=F0=9D=98=A6 =F0=
+    =9D=98=B5=F0=9D=98=B0 =F0=9D=98=B6=F0=9D=98=B4 =F0=9D=98=A2=F0=9D=98=B5:
+                              <br />=F0=9D=98=97=F0=9D=98=96 =F0=9D=98=89=F0=9D=
+    =98=96=F0=9D=98=9F 1366, =F0=9D=98=8F=F0=9D=98=B0=F0=9D=98=A3=F0=9D=98=B0=
+    =F0=9D=98=AC=F0=9D=98=A6=F0=9D=98=AF, =F0=9D=98=95=F0=9D=98=91 07030.
+                              <br />=F0=9D=98=9B=F0=9D=98=A9=F0=9D=98=AA=F0=9D=
+    =98=B4 =F0=9D=98=AA=F0=9D=98=B4 =F0=9D=98=A2=F0=9D=98=AF =F0=9D=98=88=F0=9D=
+    =98=A5=F0=9D=98=B7=F0=9D=98=A6=F0=9D=98=B3=F0=9D=98=B5=F0=9D=98=AA=F0=9D=98=
+    =B4=F0=9D=98=A6=F0=9D=98=AE=F0=9D=98=A6=F0=9D=98=AF=F0=9D=98=B5.
+                            </p>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>      <p>&nbsp;
+                                        </p>            <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                      =20
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p>
+                                        <p>&nbsp;
+                                        </p><img height=3D"1" src=3D"http://wpb=
+    51vhr9114sk.w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/t.gif" style=3D"w=
+    idth:1px;height:1px;" width=3D"1" />
+                                        <p style=3D"text-align:center;"><a href=
+    =3D"http://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/ck0AAABTBAACgu9wUJj0hXg/pre=
+    f"><img alt=3D"" src=3D"http://wpb51vhr9114sk.w8822-7d11.pmat5kz.ga/img-ck0=
+    AAABTBAACgu9wUJj0hXg/rmvaddr.gif" width=3D"314" height=3D"26" /></a>
+                                        </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>`
+
+];

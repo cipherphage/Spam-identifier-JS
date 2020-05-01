@@ -2,16 +2,18 @@
 
 ## Structure of the code
 - `spam-id.js` brings everything together to check email bodies against known spam.
-- `body-decons.js` deconstructs known and unknown string specimens into something easier to check.
-- `spam.js` and `emails.js` contain arrays of the known and unknown email bodies.
+- `models.js` contains the `EmailBody` and `Email` class definitions.
+- `spam.js` and `email.js` contain arrays of the known and unknown (respectively) email bodies.
 - `test-runner.html` and `test-spam-id.js` test the code.
 - WARNING: the emails in `spam.js` are actual spam emails. The URLs in them could be malicious!
 
 ## Step 1: naive implementation
-Weighted factors:
-- Word similarity.
-- Word frequency similarity.
-- Overall length similarity.
+Weighted factors to compare similarity:
+- Number of words.
+- Number of unique words.
+- Word choice.
+- Word frequency.
+- Overall length (to account for possible issues parsing HTML into words we should consider both word count and total length).
 
 Would strongly consider marking as spam (and blocking some content) emails that contain:
 - Data URIs (e.g., to prevent [click-jacking][3]).

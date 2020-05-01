@@ -1,6 +1,5 @@
-var spamCollection = {
-    "a": {
-      "body": `<body><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"widt=
+var spams = [
+    `<body><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"widt=
     h:600px; max-width:600px;margin:0 auto;text-align: center;font-family: Aria=
     l, Helvetica, sans-serif;padding-top:10px;"><tbody><tr><td><a href=3D"http:=
     //twbe4r58v1b71n.w871a-ec4f.mwkellqv.ml/ctzzcBAA3BAACWu9wUzzgXViw/go" style=
@@ -123,16 +122,9 @@ var spamCollection = {
     zcBAA3BAACWu9wUzzgXViw/rmvaddr.gif" width=3D"314" height=3D"26" /></a></p><=
     /td></tr></tbody></table></body>
     </html>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "b": {
-      "body": `<table class=3D"body" data-made-with-foundation=3D"" style=3D"margin:0 auto=
+    `<table class=3D"body" data-made-with-foundation=3D"" style=3D"margin:0 auto=
     ;">
       <tbody>
         <tr>
@@ -465,16 +457,9 @@ var spamCollection = {
         </tr>
       </tbody>
     </table>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
 
-    "c": {
-      "body": `<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #e6e6e6; margin: 0px; padding: 0px;" bgcolor="#e6e6e6">
+    `<body class="body" align="center" style="width: 100%; min-width: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #e6e6e6; margin: 0px; padding: 0px;" bgcolor="#e6e6e6">
     <table class="template-body" border="0" cellpadding="0" cellspacing="0" style="text-align: center; min-width: 100%;" width="100%">
     <tr>
     <td class="preheader-container">
@@ -652,16 +637,9 @@ var spamCollection = {
         </td>
       </tr>
     </table></body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "d": {
-      "body": `<body>&nbsp;
+    `<body>&nbsp;
       </body>
       <br />
       <link href=3D"http://fonts.googleapis.com/css?family=3DOpen+Sans:400,300,=
@@ -982,16 +960,9 @@ var spamCollection = {
           </tbody>
         </table></center>
       </div>`,
-        "factors": {
-          "word_list": [],
-          "word_freq": {},
-          "total_length": 0
-        }
-      },
   
   
-    "e": {
-      "body": `<body style=3D"margin: 0pt; padding: 0pt;"><center>
+    `<body style=3D"margin: 0pt; padding: 0pt;"><center>
         <table>
           <tbody>
             <tr>
@@ -1284,16 +1255,9 @@ var spamCollection = {
           </tbody>
         </table></center>
       </body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
   
   
-    "f": {
-      "body": `<body> <!--*|IF:MC_PREV=
+    `<body> <!--*|IF:MC_PREV=
     IEW_TEXT|*--> <!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" sty=
     le=3D"display:none; font-size:0px; line-height:0px; max-height:0px; max-wid=
     th:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;"></spa=
@@ -1368,14 +1332,9 @@ var spamCollection = {
     class=3D"footerContainer"></td> </tr> </table> <!--[if (gte mso 9)|(IE)]> <=
     /td> </tr> </table> <![endif]--> </td> </tr> </table> <!-- // END TEMPLATE =
     --> </td> </tr> </table> </center> </body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
-    "g": {
-      "body": `<body style="background:#fff;margin:0px;padding:0px;">   
+
+
+    `<body style="background:#fff;margin:0px;padding:0px;">   
      
       
      
@@ -1444,14 +1403,9 @@ var spamCollection = {
         
          
      </body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    },
-    "h": {
-      "body": `<body style="background:#fff;">    <div indus="95" style="width:620px;border-bottom:solid 1px #888;">    <table poacher='careless' cellspacing="0" cellpadding="0" border="0">     <tr> 	 <td style="padding-bottom: 10px"><img israeli='3' src="https://www.google.com/drive/static/images/drive/logo-drive.png" width="64" height="58" border="0"></td><i></i> 
+
+
+    `<body style="background:#fff;">    <div indus="95" style="width:620px;border-bottom:solid 1px #888;">    <table poacher='careless' cellspacing="0" cellpadding="0" border="0">     <tr> 	 <td style="padding-bottom: 10px"><img israeli='3' src="https://www.google.com/drive/static/images/drive/logo-drive.png" width="64" height="58" border="0"></td><i></i> 
          
        
         
@@ -1499,10 +1453,4 @@ var spamCollection = {
        </div>   
      
        </body>`,
-      "factors": {
-        "word_list": [],
-        "word_freq": {},
-        "total_length": 0
-      }
-    }
-  };
+  ];
