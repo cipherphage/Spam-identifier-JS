@@ -17,7 +17,7 @@ Weighted factors to compare similarity:
 
 Would strongly consider marking as spam (and blocking some content) emails that contain:
 - Data URIs (e.g., to prevent [click-jacking][3]).
-- Embedded JavaScript ().
+- Embedded JavaScript.
 - Non-HTTPS links (this one might mark too many non-spam as spam so we could take into account ratio of HTTP to HTTPS or consider anchor tag `href`s which ought to be HTTPS versus image tag `src`s which conceivably could be HTTP without security risk, although it would still be a privacy risk).
 
 Notes:

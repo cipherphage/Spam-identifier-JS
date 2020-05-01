@@ -25,13 +25,13 @@ class EmailBody {
     };
 
     // filter out duplicate words and count frequency
-    for (let w in ws) {
+    ws.forEach(w => {
       if (this.factors.words_object.hasOwnProperty(w)) {
         // increase freq count
         this.factors.words_object.w = this.factors.words_object.w + 1;
       }
       this.factors.words_object[w] = 1;
-    }
+    });
 
     // update number of unique words
     this.factors.num_unique_words = Object.keys(this.factors.words_object).length;

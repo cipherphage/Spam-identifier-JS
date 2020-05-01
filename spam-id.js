@@ -23,15 +23,16 @@ var calcWordCF = (sf, ef) => {
   let score = 0.0;
   let uCount = 0;
   let fCount = 0;
+  let words = Object.keys(sf.words_object);
 
-  for (let w in sf.words_object) {
+  words.forEach(w => {
     if (ef.hasOwnProperty(w)) {
       uCount++;
       if ((ef[w] > 3) && (Math.abs(ef[w] - sf[w]) < 1)) {
         fCount++;
       }
     }
-  }
+  });
 
   let uniqueRatio = uCount/sf.num_unique_words;
   let freqRatio = fCount/uCount;
@@ -82,12 +83,14 @@ var spamIdentifier = (spams, emails) => {
   let emailCollection = new Email(emails);
   let spamf = spamCollection.get_factors;
   let emailf = emailCollection.get_factors;
+  console.log("spam check");
+  console.log(spamCollection);
 
   let results = emailf.map(ef => {
     let r = 0.0;
-    spamf.forEach((sf, i) => {
-      r = calcNumWords(sf, ef) + calcNumUnique(sf, ef) +
-        calcWordCF(sf, ef) + calcLength(sf, ef);
+    spamf.forEach(sf => {
+      r = calcNumWords(sf.factors, ef.factors) + calcNumUnique(sf.factors, ef.factors) +
+        calcWordCF(sf.factors, ef.factors) + calcLength(sf.factors, ef.factors);
       return r;
     });
     return r;
@@ -99,7 +102,7 @@ var spamIdentifier = (spams, emails) => {
       e.isSpam = true;
     }
   });
-  console.log("spam check");
+  console.log("email check");
   console.log(emailCollection);
   return emailCollection;
 };
