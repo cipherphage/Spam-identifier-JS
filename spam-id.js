@@ -24,7 +24,7 @@ var calcWordCF = (sf, ef) => {
   let uCount = 0;
   let fCount = 0;
 
-  for (w in sf.words_object) {
+  for (let w in sf.words_object) {
     if (ef.hasOwnProperty(w)) {
       uCount++;
       if ((ef[w] > 3) && (Math.abs(ef[w] - sf[w]) < 1)) {
@@ -80,8 +80,8 @@ var calcLength = (sf, ef) => {
 var spamIdentifier = (spams, emails) => {
   let spamCollection = new Email(spams);
   let emailCollection = new Email(emails);
-  let spamf = spamCollection.factors();
-  let emailf = emailCollection.factors();
+  let spamf = spamCollection.get_factors;
+  let emailf = emailCollection.get_factors;
 
   let results = emailf.map(ef => {
     let r = 0.0;
@@ -92,5 +92,14 @@ var spamIdentifier = (spams, emails) => {
     });
     return r;
   });
-  return results;
+  
+  emailCollection.emails.forEach((e,i) => {
+    e.spamCheck = true;
+    if (results[i] > 3.2) {
+      e.isSpam = true;
+    }
+  });
+  console.log("spam check");
+  console.log(emailCollection);
+  return emailCollection;
 };

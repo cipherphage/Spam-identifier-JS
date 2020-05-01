@@ -1,16 +1,19 @@
-
-// knownspam is emailCollection index 7
+// known spam is at emailCollection index 7
 describe('Testing the validator', () => {
-  it('should show error for invalid url', () => {
-    let result = validateURL("this isn't a url!");
+  it('should show accurate spam identification', () => {
+    let result = spamIdentifier(spams, emails);
+    console.log("spam test");
+    console.log(result);
 
-    expect(result.valid).toBe(false);
-    expect(result.msg).toBe("Error: URL is invalid.");
+    expect(result.total_spam).toBe(1);
+
+    result.emails.forEach((e, i) => {
+      expect(e.spamCheck).toBe(true);
+      if (i != 7) {
+        expect(e.isSpam).toBe(false);
+      } else {
+        expect(e.isSpam).toBe(true);
+      }
+    });
   });
-  // it('should show error for too lengthy url', ()=>{
-  //   
-  // });
-  // it('should allow valid url', ()=>{
-  //   
-  // });
 });

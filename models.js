@@ -5,7 +5,7 @@ class EmailBody {
     this.isSpam = false;
   }
 
-  get factors() {
+  get get_factors() {
     if (this.hasOwnProperty('factors')) {
       return this.factors;
     }
@@ -25,7 +25,7 @@ class EmailBody {
     };
 
     // filter out duplicate words and count frequency
-    for (w in ws) {
+    for (let w in ws) {
       if (this.factors.words_object.hasOwnProperty(w)) {
         // increase freq count
         this.factors.words_object.w = this.factors.words_object.w + 1;
@@ -44,19 +44,27 @@ class Email {
     this.emails = emails;
   }
 
-  get factors() {
-    if (this.hasOwnProperty('factors')) {
-      return this.factors;
-    }
+  get get_factors() {
     return this.calcFactors();
+  }
+
+  get total_spam() {
+    let c = 0;
+    this.emails.forEach(e => {
+      if (e.isSpam) {
+        c++;
+      }
+    });
+    return c;
   }
 
   calcFactors() {
     // give us an array of the spam email's factors
-    this.factors = this.emails.map(e => {
-      eb = new EmailBody(e);
-        return eb.factors();
+    this.emails = this.emails.map(e => {
+      let eb = new EmailBody(e);
+      eb.get_factors;
+      return eb;
     });
-    return this.factors;
+    return this.emails;
   }
 }
