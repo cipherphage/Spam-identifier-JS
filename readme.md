@@ -1,4 +1,6 @@
-# Spam Identification Using JavaScript and Email Bodies
+# Spam Identification By Comparing Email Bodies 
+- Comparing email bodies only. No headers, etc.
+- Using only vanilla JavaScript (except for Jasmine for testing).
 
 ## Structure of the code
 - `spam-id.js` brings everything together to check email bodies against known spam.
@@ -28,12 +30,27 @@
 ```
 
 ## Step 1: naive implementation
-Currently implemented weighted factors for comparing similarity:
+Currently implemented weighted factors for comparing email body similarity:
 - Number of words.
 - Number of unique words.
 - Word choice.
 - Word frequency.
 - Overall length (to account for possible issues parsing HTML into words we should consider both word count and total length).
+
+### How it works
+These functions and limits that work together to determine how similar two email bodies are (note: they all require manual tweaking because we're not using user feedback):
+
+- There are five comparisons which are weighted roughly equally at 20% of the total.  Each comparison returns a value between 0 and 0.2. The total score is therefore between 0 and 1, inclusive.
+
+- `calcNumWords`:  returns 0.2 if the number of words in each email body are the same or within 100 words. Otherwise, return 0.
+
+- `calcNumUnique`: returns 0.2 if the number of unique words in each email body are the same or within 50 words. Otherwise, return 0.
+
+- `calcWordCF`: returns a more fine-grained score of two comparisons: the unique ratio (how many unique words are shared between the two emails divided by the total number of unique words in the known spam) and the frequency ratio (how many words have a similar frequency divided by the number of shared unique words). Each of these comparisons return between 0 and 0.2.
+
+- `calcLength`: returns 0.2 if the length of the email body string is within 500 characters, otherwise it returns 0.
+
+- `iLim` is the global individual limit (the maximum allowed value for the comparison metric between any two emails) and `tLim` is the global total limit (the maximum allowed value for the comparison metrics between the email of unknown type and the emails of known type spam). Once the total limit is reached an email is marked as spam.
 
 Haven't implemented, but would strongly consider marking as spam (and blocking some content) emails that contain:
 - Data URIs (e.g., to prevent [click-jacking][3]).
@@ -47,6 +64,9 @@ Notes:
 - Links containing the `ml` (Mali) and `tk` (Tokelau, New Zealand) domains seem to be associated with my spam mail, but without more data I don't want to assume this is always true.
 
 ## Step 2: consider using the [natural][4] NPM package to perform more robust Natural Language Processing
+- Ideally, for automatic spam detection based on the email body you'd want to use legitimate NLP/ML with user feedback taken into account.
+- We would also consider the HTML and CSS of the email body separately from the text content.
+- To implement that you would use Node (or some other backend language) to create a spam detection service. 
 
 ## Step 3: consider methods to optimize performance (e.g., at least get it off of the main thread)
 

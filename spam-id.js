@@ -65,11 +65,7 @@ var calcWordCF = (sf, ef) => {
 };
 
 var calcLength = (sf, ef) => {
-  if (sf.total_length == ef.total_length) {
-    return 0.2;
-  } else if (Math.abs(sf.total_length - ef.total_length) < 250) {
-    return 0.2;
-  } else if (Math.abs(sf.total_length - ef.total_length) < 500) {
+  if (Math.abs(sf.total_length - ef.total_length) < 500) {
     return 0.2;
   } else {
     return 0.0
